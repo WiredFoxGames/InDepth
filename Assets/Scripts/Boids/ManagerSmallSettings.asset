@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6a9d5ee930de94888a2e125dbaf1c5, type: 3}
-  m_Name: ManagerScript
+  m_Name: ManagerSmallSettings
   m_EditorClassIdentifier: 
   actionList:
   - {fileID: 11400000, guid: ce553826ab165e34b96e5c6690255a26, type: 2}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "BoidGroup/Action/Cohesion")]
+[CreateAssetMenu(menuName = "BoidGroup/Base/Cohesion")]
 public class ActionCohesion : BoidAction
 {
     Vector3 currentVelocity;
