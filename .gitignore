@@ -12,6 +12,7 @@
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
+.idea\
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -58,3 +59,12 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.idea/.idea.WiredFoxGames/.idea/.idea.WiredFoxGames.iml
+.idea/.idea.WiredFoxGames/.idea/contentModel.xml
+.idea/.idea.WiredFoxGames/.idea/encodings.xml
+.idea/.idea.WiredFoxGames/.idea/indexLayout.xml
+.idea/.idea.WiredFoxGames/.idea/misc.xml
+.idea/.idea.WiredFoxGames/.idea/modules.xml
+.idea/.idea.WiredFoxGames/.idea/projectSettingsUpdater.xml
+.idea/.idea.WiredFoxGames/.idea/workspace.xml
+.idea/.idea.WiredFoxGames/riderModule.iml
