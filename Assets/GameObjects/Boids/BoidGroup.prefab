@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ce70aeac3c92349884c0ca984a4ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boidObject: {fileID: 8233257060537457138, guid: db6b5fdfb9355f341ac6ce6b975b2b25,
+  boidObject: {fileID: 8233257060537457138, guid: 2384382eea505774abd622ef53359fd6,
     type: 3}
   boidAction: {fileID: 11400000, guid: 6bdb44c3f6607634b82b3b1b930abb96, type: 2}
   accelSpeed: 4

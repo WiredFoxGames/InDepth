@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Lords\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lords\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_InDepth.1231318947.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Lords\Documents\InDepth\InDepth\InDepth" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Boids" t="Include">
+            <e p="Actions" t="Include">
+              <e p="ActionAlignment.cs" t="Include" />
+              <e p="ActionCohesion.cs" t="Include" />
+              <e p="ActionManager.cs" t="Include" />
+              <e p="ActionSeekHome.cs" t="Include" />
+              <e p="ActionSeparation.cs" t="Include" />
+            </e>
+            <e p="BoidAction.cs" t="Include" />
+            <e p="BoidGroup.cs" t="Include" />
+            <e p="BoidUser.cs" t="Include" />
+          </e>
+          <e p="Terrain" t="Include">
+            <e p="ChunckGenerator.cs" t="Include" />
+            <e p="PerlinItemValue.cs" t="Include" />
+            <e p="PerlinNoiseTexture.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Tests" t="Include">
+          <e p="Mandelbrot" t="Include">
+            <e p="Mandelbrot.shader" t="Include" />
+            <e p="MandelExplorer.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="InDepth.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

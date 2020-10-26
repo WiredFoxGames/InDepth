@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db98f176e6d9bf14e84de6e2315b8225, type: 3}
   m_Name: SeekHome
   m_EditorClassIdentifier: 
-  center: {x: 0, y: 0, z: 0}
+  center: {x: 1.8382692, y: 12.200005, z: 4.5521965}
   radius: 90
-  boidSmoothing: 0.02
+  boidSmoothing: 0.1
