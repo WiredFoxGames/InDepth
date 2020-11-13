@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -26,6 +27,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/Spherecube.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/ChunckGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/FPcontroller.cs" />
       </list>
     </option>
   </component>
@@ -71,7 +73,8 @@
       <workItem from="1595173377443" duration="4828000" />
       <workItem from="1595347510497" duration="7534000" />
       <workItem from="1603744334572" duration="10000" />
-      <workItem from="1605127287633" duration="2948000" />
+      <workItem from="1605127287633" duration="4370000" />
+      <workItem from="1605294748600" duration="3782000" />
     </task>
     <servers />
   </component>
