@@ -10,7 +10,7 @@
         <e p="Editor" t="Include">
           <e p="ConditionalHidePropertyDrawer.cs" t="Include" />
         </e>
-        <e p="FPcontroller.cs" t="Include" />
+        <e p="InteractController.cs" t="Include" />
         <e p="Sci-Fi Styled Modular Pack" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
@@ -44,6 +44,9 @@
             <e p="NoiseDensity.cs" t="Include" />
             <e p="SphereDensity.cs" t="Include" />
           </e>
+          <e p="DoorController.cs" t="Include" />
+          <e p="DoorsDetection.cs" t="Include" />
+          <e p="FPcontroller.cs" t="Include" />
           <e p="Helper" t="Include">
             <e p="ConditionalHideAttribute.cs" t="Include" />
           </e>

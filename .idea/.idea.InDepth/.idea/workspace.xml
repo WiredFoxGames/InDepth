@@ -12,8 +12,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorsDetection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -26,8 +29,12 @@
         <option value="$PROJECT_DIR$/Assets/Tests/Mandelbrot/Mandelbrot.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/Spherecube.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/ChunckGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/DoorsDetection.cs" />
+        <option value="$PROJECT_DIR$/Assets/DoorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
+        <option value="$PROJECT_DIR$/Assets/InteractController.cs" />
       </list>
     </option>
   </component>
@@ -75,6 +82,11 @@
       <workItem from="1603744334572" duration="10000" />
       <workItem from="1605127287633" duration="4370000" />
       <workItem from="1605294748600" duration="3782000" />
+      <workItem from="1605357626984" duration="1014000" />
+      <workItem from="1605379918535" duration="1365000" />
+      <workItem from="1605446118565" duration="524000" />
+      <workItem from="1605446703451" duration="651000" />
+      <workItem from="1605537359515" duration="2897000" />
     </task>
     <servers />
   </component>
