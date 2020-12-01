@@ -60,7 +60,6 @@ public class Chunk : MonoBehaviour {
 
         
         int r = Random.Range(0, 20);
-        Debug.Log(r);
         if (r == 0)
         {
             Vector3 fishpos = new Vector3(coord.x * 16, coord.y * 16,coord.z * 16);

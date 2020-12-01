@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public class Submarine : MonoBehaviour {
     public float maxSpeed = 5;
@@ -22,9 +22,19 @@ public class Submarine : MonoBehaviour {
     float pitchVelocity;
     float currentSpeed;
     public Material propSpinMat;
+    
+    // Weapons
+    public LayerMask ignoreMask;
+    ArrayList bulletArray = new ArrayList();
+    ArrayList bulletDumpster = new ArrayList();
+    
+    public GameObject bullet;
 
-    void Start () {
+    void Start ()
+    {
+        //Cursor.visible = false;
         currentSpeed = maxSpeed;
+        ignoreMask = LayerMask.GetMask("Player");
     }
 
     void Update () {
@@ -56,6 +66,6 @@ public class Submarine : MonoBehaviour {
 
         propeller.Rotate (Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         propSpinMat.color = new Color (propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
-
+        
     }
 }

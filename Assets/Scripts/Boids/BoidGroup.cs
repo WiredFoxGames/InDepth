@@ -47,7 +47,6 @@ public class BoidGroup : MonoBehaviour
             boidGroup.Add(boid);
 
         }
-        Debug.Log(boidGroup.Count + " boids generated");
     }
 
     // Update is called once per frame
