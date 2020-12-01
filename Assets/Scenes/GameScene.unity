@@ -261,15 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ee4deeb784a6c40829c2af3f0c4edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 10
   timeBetweenShooting: 0.01
-  spread: 2
+  spread: 3
   range: 1000
   reloadTime: 0
   timeBetweenShots: 0.001
   magazineSize: 20000
-  bulletsPerTap: 1
-  allowButtonHold: 0
+  bulletsPerTap: 50
+  allowButtonHold: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 4294967295
