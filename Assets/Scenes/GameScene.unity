@@ -261,22 +261,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ee4deeb784a6c40829c2af3f0c4edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
   damage: 8
-  magazine: 100
-  bulletSize: 1
-  fireRate: 5
+  timeBetweenShooting: 0.01
   spread: 2
   range: 1000
-  reload: 0
-  realoadSpeed: 0
-  multiShot: 0
-  allowHold: 1
-  crosshair: {fileID: 555202157}
-  attackPoint: {fileID: 0}
+  reloadTime: 0
+  timeBetweenShots: 0.001
+  magazineSize: 20000
+  bulletsPerTap: 1
+  allowButtonHold: 0
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
+  crosshair: {fileID: 555202157}
+  bullet: {fileID: 3232226090189845381, guid: 1cbc87792e42a0b41be5a22693951567, type: 3}
 --- !u!1001 &446424586508783633
 PrefabInstance:
   m_ObjectHideFlags: 0
