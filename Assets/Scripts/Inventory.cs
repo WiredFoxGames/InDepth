@@ -3,55 +3,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class Inventory
 {
-    // Start is called before the first frame update
-    private bool _inventoryEnabled;
-    public GameObject inventory;
-    private int _allSlots;
-    private int _enabledSlots;
-    private GameObject[] _slot;
-    public GameObject slotHolder;
+    private List<Item> itemList;
 
-    void Start()
+    public Inventory()
     {
-        _allSlots = slotHolder.transform.childCount;
-        _slot = new GameObject[_allSlots];
-        for (int i = 0; i < _allSlots; i++)
-        {
-            _slot[i] = slotHolder.transform.GetChild(i).gameObject;
-        }
+        itemList = new List<Item>();
+        AddItem(new Item {itemType = Item.ItemType.Iron, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Crystal, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddItem(Item item)
     {
+        itemList.Add(item);
     }
 
-    private void OnTriggerEnter(Collider other)
+    public List<Item> GetItemList()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _inventoryEnabled = true;
-        }
-
-        if (_inventoryEnabled)
-        {
-            inventory.SetActive(true);
-        }
+        return itemList;
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _inventoryEnabled = false;
-        }
-
-        if (_inventoryEnabled == false)
-        {
-            inventory.SetActive(false);
-        }
-    }
-
 }

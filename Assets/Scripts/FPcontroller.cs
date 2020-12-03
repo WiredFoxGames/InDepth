@@ -7,6 +7,8 @@ public class FPcontroller : MonoBehaviour
 {
     private CharacterController characterController;
 
+    [SerializeField] private UI_Inventory uiInvetory;
+    
     public float walkSpeed = 6.0f;
     public float runSpeed = 10.0f;
     public float jumpSpeed = 8.0f;
@@ -20,12 +22,19 @@ public class FPcontroller : MonoBehaviour
     public float maxRotation = 60.0f;
     private float h_mouse;
     private float v_mouse;
+    private Inventory inventory;
     
-    
+    private void Awake()
+    {
+        inventory = new Inventory();
+        uiInvetory.SetInventory(inventory);
+    }
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked; 
+        
     }
 
     // Update is called once per frame
