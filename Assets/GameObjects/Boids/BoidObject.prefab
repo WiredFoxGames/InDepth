@@ -160,6 +160,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8167765041917917383}
     m_Modifications:
+    - target: {fileID: 100000, guid: 005f1481f0ef9d843a695f41684baca6, type: 3}
+      propertyPath: m_Name
+      value: 17920_Clown_Fish_baby_V1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 005f1481f0ef9d843a695f41684baca6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -215,10 +219,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 005f1481f0ef9d843a695f41684baca6, type: 3}
       propertyPath: m_LocalScale.z
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 005f1481f0ef9d843a695f41684baca6, type: 3}
-      propertyPath: m_Name
-      value: 17920_Clown_Fish_baby_V1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 005f1481f0ef9d843a695f41684baca6, type: 3}

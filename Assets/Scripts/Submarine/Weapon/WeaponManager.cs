@@ -55,8 +55,9 @@ public class WeaponManager : MonoBehaviour
         //RayCast
         if (Physics.Raycast(crosshair.transform.position, crosshair.transform.forward, out rayHit, range, enemyLayer))
         {
+            Debug.DrawRay(crosshair.transform.position, crosshair.transform.forward, Color.green);
+
             Vector3 rndSpread = new Vector3(Random.Range(-spread, spread), Random.Range(-spread, spread), Random.Range(-spread, spread));
-            Debug.Log(rayHit.collider.name);
             GameObject movingBullet;
             movingBullet = Instantiate(bullet, transform.position, transform.rotation);
             movingBullet.transform.LookAt(rayHit.point + rndSpread);
