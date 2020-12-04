@@ -56,6 +56,8 @@
           <e p="Inventory_Open.cs" t="Include" />
           <e p="InventoryChar.cs" t="Include" />
           <e p="Item.cs" t="Include" />
+          <e p="ItemAssets.cs" t="Include" />
+          <e p="ItemWorld.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
           <e p="MySceneManager.cs" t="Include" />
           <e p="Shaders" t="Include">

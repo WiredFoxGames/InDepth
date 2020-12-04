@@ -6,6 +6,7 @@ TagManager:
   tags:
   - itemSlotContainer
   - itemSlotTemplate
+  - Floor
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,6 @@ public class FPcontroller : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     private Vector3 move = Vector3.zero;
-        
     public Camera cam;
     public float mHorizontal = 3.0f;
     public float mVertical = 2.0F;
@@ -28,8 +27,11 @@ public class FPcontroller : MonoBehaviour
     {
         inventory = new Inventory();
         uiInvetory.SetInventory(inventory);
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 14), new Item {itemType = Item.ItemType.Crystal, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 14), new Item {itemType = Item.ItemType.Rock, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 9), new Item {itemType = Item.ItemType.Meat, amount = 1});
     }
-
+    
     void Start()
     {
         characterController = GetComponent<CharacterController>();
