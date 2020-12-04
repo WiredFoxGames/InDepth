@@ -17,21 +17,22 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
-
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        //ItemWorld itemWorld = other.collider.GetComponent<ItemWorld>();
+        // Inventory inv = other.GetComponent<UI_Inventory>().GetInventory();
+        // ItemWorld itemWorld = GetComponent<ItemWorld>();
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log(other);
-            //Destroy(other.gameObject);
+            DestroySelf();
            
-            /*inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();*/
+            // inv.AddItem(itemWorld.GetItem());
+            // itemWorld.DestroySelf();
         }
         
+        Debug.Log(other.gameObject.tag);
         
     }
+
 
     public Item GetItem()
     {
