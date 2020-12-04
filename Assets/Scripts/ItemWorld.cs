@@ -8,7 +8,6 @@ public class ItemWorld : MonoBehaviour
     private Item item;
     private SpriteRenderer spriteRenderer;
     private Inventory inventory;
-    public Rigidbody rg;
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
@@ -17,23 +16,7 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Inventory inv = other.GetComponent<UI_Inventory>().GetInventory();
-        // ItemWorld itemWorld = GetComponent<ItemWorld>();
-        if (other.gameObject.tag == "Player")
-        {
-            DestroySelf();
-           
-            // inv.AddItem(itemWorld.GetItem());
-            // itemWorld.DestroySelf();
-        }
-        
-        Debug.Log(other.gameObject.tag);
-        
-    }
-
-
+    
     public Item GetItem()
     {
         return item;
@@ -44,14 +27,11 @@ public class ItemWorld : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Awake()
-    {
-        //spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+   
 
     public void SetItem(Item item)
     {
         this.item = item;
-        //spriteRenderer.sprite = item.GetSprite();
+        
     }
 }

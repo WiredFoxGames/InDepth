@@ -28,8 +28,14 @@ public class FPcontroller : MonoBehaviour
         inventory = new Inventory();
         uiInvetory.SetInventory(inventory);
         ItemWorld.SpawnItemWorld(new Vector3(1, 0, 14), new Item {itemType = Item.ItemType.Crystal, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 14), new Item {itemType = Item.ItemType.Rock, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 9), new Item {itemType = Item.ItemType.Meat, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 18), new Item {itemType = Item.ItemType.Rock, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 12), new Item {itemType = Item.ItemType.Rock, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 16), new Item {itemType = Item.ItemType.Rock, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4,0,10), new Item {itemType = Item.ItemType.Rock, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 4), new Item {itemType = Item.ItemType.Iron, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 6), new Item {itemType = Item.ItemType.Meat, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 22), new Item {itemType = Item.ItemType.H2O, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 25), new Item {itemType = Item.ItemType.Pearl, amount = 1});
     }
     
     void Start()
@@ -39,6 +45,18 @@ public class FPcontroller : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        ItemWorld itemWorld = other.GetComponent<ItemWorld>();
+        if (itemWorld != null)
+        {
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
+        
+        Debug.Log(other.gameObject.tag);
+    }
+    
     // Update is called once per frame
     void Update()
     {

@@ -32,7 +32,24 @@ public class Item {
             case ItemType.Meat: return ItemAssets.Instance.meatSprite;
             case ItemType.H2O: return ItemAssets.Instance.h2OSprite;
             case ItemType.Health: return ItemAssets.Instance.healthSprite;
-            
+      }
+   }
+
+   public bool isStackable()
+   {
+      switch (itemType)
+      {
+         default:
+            case ItemType.Crystal:
+            case ItemType.Iron:
+            case ItemType.Pearl:
+            case ItemType.Meat:
+            case ItemType.H2O:
+               return true;
+            case ItemType.LaCanicadora:
+            case ItemType.DoubleCannon:
+            case ItemType.ElSuspenso:
+               return false;
       }
    }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
@@ -32,7 +33,11 @@ public class UI_Inventory : MonoBehaviour
     
     private void RefreshInventoryItems()
     {
-        
+        foreach (Transform child in itemSlotContainer)
+        {
+            if (child == itemSlotTemplate) continue;
+            Destroy(child.gameObject);
+        }
         int x = 0;
         int y = 0;
         float itemSlotCellSize = 82f;
@@ -44,6 +49,16 @@ public class UI_Inventory : MonoBehaviour
             itemSlotRecTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
             Image image = itemSlotRecTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+            TextMeshProUGUI amountText = itemSlotRecTransform.Find("amount").GetComponent<TextMeshProUGUI>();
+            if (item.amount > 1)
+            {
+                amountText.SetText(item.amount.ToString());
+            }
+            else
+            {
+                amountText.SetText("");
+            }
+            
             x++;
             if (x > 8)
             {
