@@ -23,12 +23,18 @@ public class Submarine : MonoBehaviour {
     float currentSpeed;
     public Material propSpinMat;
     
+    // Weapons
+    public LayerMask ignoreMask;
+    ArrayList bulletArray = new ArrayList();
+    ArrayList bulletDumpster = new ArrayList();
+    
     public GameObject bullet;
 
     void Start ()
     {
         //Cursor.visible = false;
         currentSpeed = maxSpeed;
+        ignoreMask = LayerMask.GetMask("Player");
     }
 
     void Update () {
@@ -55,9 +61,9 @@ public class Submarine : MonoBehaviour {
         transform.localEulerAngles += (Vector3.up * yawVelocity + Vector3.left * pitchVelocity) * Time.deltaTime * speedPercent;
         transform.Translate (transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
-        // rudderYaw.localEulerAngles = Vector3.up * yawVelocity / maxTurnSpeed * rudderAngle;
-        // rudderPitch.localEulerAngles = Vector3.left * pitchVelocity / maxPitchSpeed * rudderAngle;
-        //
+        rudderYaw.localEulerAngles = Vector3.up * yawVelocity / maxTurnSpeed * rudderAngle;
+        rudderPitch.localEulerAngles = Vector3.left * pitchVelocity / maxPitchSpeed * rudderAngle;
+
         propeller.Rotate (Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         propSpinMat.color = new Color (propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
         
