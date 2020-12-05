@@ -17,6 +17,7 @@ public class Inventory
         AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.Pearl, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.H2O, amount = 1});
+        AddItem(new Item {itemType = Item.ItemType.H2O, amount = 1});
        
     }
 
@@ -33,7 +34,6 @@ public class Inventory
                     itemAlreadyInInventory = true;
                 }
             }
-
             if (!itemAlreadyInInventory)
             {
                 itemList.Add(item);
@@ -42,6 +42,32 @@ public class Inventory
         else
         {
             itemList.Add(item);
+        }
+
+        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if (item.isStackable())
+        {
+            Item itemInInventory = null;
+            foreach (Item inventoryItem in itemList)
+            {
+                if (inventoryItem.itemType == item.itemType)
+                {
+                    inventoryItem.amount -= item.amount;
+                    itemInInventory = inventoryItem;
+                }
+            }
+            if (itemInInventory != null && itemInInventory.amount <= 0)
+            {
+                itemList.Remove(itemInInventory);
+            }
+        }
+        else
+        {
+            itemList.Remove(item);
         }
 
         OnItemListChanged?.Invoke(this, EventArgs.Empty);

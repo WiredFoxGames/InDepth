@@ -27,22 +27,15 @@ public class FPcontroller : MonoBehaviour
     {
         inventory = new Inventory();
         uiInvetory.SetInventory(inventory);
+        uiInvetory.SetPlayer(this);
         ItemWorld.SpawnItemWorld(new Vector3(1, 0, 14), new Item {itemType = Item.ItemType.Crystal, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 18), new Item {itemType = Item.ItemType.Rock, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 12), new Item {itemType = Item.ItemType.Rock, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 16), new Item {itemType = Item.ItemType.Rock, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4,0,10), new Item {itemType = Item.ItemType.Rock, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 4), new Item {itemType = Item.ItemType.Iron, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 6), new Item {itemType = Item.ItemType.Meat, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 22), new Item {itemType = Item.ItemType.H2O, amount = 1});
-        ItemWorld.SpawnItemWorld(new Vector3(-4, 0, 25), new Item {itemType = Item.ItemType.Pearl, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 17), new Item {itemType = Item.ItemType.Crystal, amount = 1});
     }
     
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked; 
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,5 +81,9 @@ public class FPcontroller : MonoBehaviour
 
         move.y -= gravity * Time.deltaTime;
         characterController.Move(move * Time.deltaTime);
+    }
+    
+    public Vector3 GetPosition() {
+        return transform.position;
     }
 }

@@ -27,6 +27,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -53,12 +54,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryDos.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemAssets.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
       </list>
     </option>
@@ -124,7 +125,9 @@
       <workItem from="1607019389284" duration="8311000" />
       <workItem from="1607083929530" duration="1932000" />
       <workItem from="1607091779548" duration="13201000" />
-      <workItem from="1607115657123" duration="5320000" />
+      <workItem from="1607115657123" duration="5858000" />
+      <workItem from="1607134005714" duration="534000" />
+      <workItem from="1607178080428" duration="11088000" />
     </task>
     <servers />
   </component>

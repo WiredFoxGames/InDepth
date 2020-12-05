@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Diagnostics;
+
 public class ItemWorld : MonoBehaviour
 {
     private Item item;
     private SpriteRenderer spriteRenderer;
     private Inventory inventory;
+    
     public static ItemWorld SpawnItemWorld(Vector3 position, Item item)
     {
         Transform transform = Instantiate(ItemAssets.Instance.pfItemWorld, position, Quaternion.identity);
@@ -16,6 +19,15 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
+
+    public static ItemWorld DropItem(Vector3 dropPosition, Item item)
+    {
+        
+        Vector3 randomDir = new Vector3(-2,0,0 );
+        ItemWorld itemWorld = SpawnItemWorld(dropPosition + randomDir * 1f, item);
+        itemWorld.GetComponent<Rigidbody>().AddForce(randomDir * 1f, ForceMode.Impulse);
+        return itemWorld;
+    }
     
     public Item GetItem()
     {

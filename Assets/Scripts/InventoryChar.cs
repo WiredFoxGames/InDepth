@@ -20,10 +20,12 @@ public class InventoryChar : MonoBehaviour
         if (_inventoryEnabled)
         {
             inventory.SetActive(true);
+            Cursor.lockState = CursorLockMode.None; 
         }
         else
-        {
+        {    
             inventory.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked; 
         }
     }
 }

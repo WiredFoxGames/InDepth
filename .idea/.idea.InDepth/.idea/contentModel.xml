@@ -26,6 +26,7 @@
             <e p="BoidGroup.cs" t="Include" />
             <e p="BoidUser.cs" t="Include" />
           </e>
+          <e p="Button_UI.cs" t="Include" />
           <e p="CharacterInventory.cs" t="Include" />
           <e p="Chunk.cs" t="Include" />
           <e p="ColourGenerator.cs" t="Include" />
