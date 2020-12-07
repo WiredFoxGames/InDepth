@@ -19,6 +19,7 @@ public class Submarine : MonoBehaviour {
 
     Vector3 velocity;
     float yawVelocity;
+    float rollVelocity;
     float pitchVelocity;
     float currentSpeed;
     public Material propSpinMat;
@@ -37,35 +38,41 @@ public class Submarine : MonoBehaviour {
         ignoreMask = LayerMask.GetMask("Player");
     }
 
-    void Update () {
+    void Update()
+    {
         float accelDir = 0;
-        if (Input.GetKey (KeyCode.Q)) {
+        if (Input.GetKey(KeyCode.Q))
+        {
             accelDir -= 1;
         }
-        if (Input.GetKey (KeyCode.E)) {
+
+        if (Input.GetKey(KeyCode.E))
+        {
             accelDir += 1;
         }
 
         currentSpeed += acceleration * Time.deltaTime * accelDir;
-        currentSpeed = Mathf.Clamp (currentSpeed, 0, maxSpeed);
+        currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
         float speedPercent = currentSpeed / maxSpeed;
 
         Vector3 targetVelocity = transform.forward * currentSpeed;
-        velocity = Vector3.Lerp (velocity, targetVelocity, Time.deltaTime * smoothSpeed);
+        velocity = Vector3.Lerp(velocity, targetVelocity, Time.deltaTime * smoothSpeed);
 
-        float targetPitchVelocity = Input.GetAxisRaw ("Vertical") * maxPitchSpeed;
-        pitchVelocity = Mathf.Lerp (pitchVelocity, targetPitchVelocity, Time.deltaTime * smoothTurnSpeed);
+        float targetPitchVelocity = Input.GetAxisRaw("Vertical") * maxPitchSpeed;
+        pitchVelocity = Mathf.Lerp(pitchVelocity, targetPitchVelocity, Time.deltaTime * smoothTurnSpeed);
 
-        float targetYawVelocity = Input.GetAxisRaw ("Horizontal") * maxTurnSpeed;
-        yawVelocity = Mathf.Lerp (yawVelocity, targetYawVelocity, Time.deltaTime * smoothTurnSpeed);
-        transform.localEulerAngles += (Vector3.up * yawVelocity + Vector3.left * pitchVelocity) * Time.deltaTime * speedPercent;
-        transform.Translate (transform.forward * currentSpeed * Time.deltaTime, Space.World);
+        float targetYawVelocity = Input.GetAxisRaw("Horizontal") * maxTurnSpeed;
+        yawVelocity = Mathf.Lerp(yawVelocity, targetYawVelocity, Time.deltaTime * smoothTurnSpeed);
+        transform.localEulerAngles +=
+            (Vector3.up * yawVelocity + Vector3.left * pitchVelocity) * Time.deltaTime * speedPercent;
+        transform.Translate(transform.forward * currentSpeed * Time.deltaTime, Space.World);
 
         rudderYaw.localEulerAngles = Vector3.up * yawVelocity / maxTurnSpeed * rudderAngle;
         rudderPitch.localEulerAngles = Vector3.left * pitchVelocity / maxPitchSpeed * rudderAngle;
 
-        propeller.Rotate (Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
-        propSpinMat.color = new Color (propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
+        propeller.Rotate(Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
+        propSpinMat.color =
+            new Color(propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
         
     }
 }
