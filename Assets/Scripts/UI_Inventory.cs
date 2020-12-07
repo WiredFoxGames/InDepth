@@ -14,7 +14,7 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private FPcontroller player;
-
+    public bool isFull;
     private void Awake()
     {
         itemSlotContainer = transform.Find("itemSlotContainer");
@@ -58,9 +58,11 @@ public class UI_Inventory : MonoBehaviour
             };
             itemSlotRecTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {
+                isFull = false;
                 Item duplicateItem = new Item {itemType = item.itemType, amount = item.amount};
                 inventory.RemoveItem(item);
                 ItemWorld.DropItem(player.GetPosition(), duplicateItem);
+                
             };
             
             itemSlotRecTransform.anchoredPosition = new Vector2(x * itemSlotCellSize, y * itemSlotCellSize);
@@ -81,7 +83,13 @@ public class UI_Inventory : MonoBehaviour
             {
                 x = 0;
                 y--;
+                if (y < -2)
+                {
+                    isFull = true;
+                }
             }
+
+            
         }
     }
 }

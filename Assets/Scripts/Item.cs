@@ -31,7 +31,9 @@ public class Item {
             case ItemType.Pearl: return ItemAssets.Instance.pearlSprite;
             case ItemType.Meat: return ItemAssets.Instance.meatSprite;
             case ItemType.H2O: return ItemAssets.Instance.h2OSprite;
-            case ItemType.Health: return ItemAssets.Instance.healthSprite;
+            case ItemType.LaCanicadora: return ItemAssets.Instance.laCanicadoraSprite;
+            case ItemType.ElSuspenso: return ItemAssets.Instance.elSuspensoSprite;
+            case ItemType.DoubleCannon: return ItemAssets.Instance.doubleCannonSprite;
       }
    }
 

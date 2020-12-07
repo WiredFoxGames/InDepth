@@ -22,7 +22,7 @@ public class FPcontroller : MonoBehaviour
     private float h_mouse;
     private float v_mouse;
     private Inventory inventory;
-    
+   
     private void Awake()
     {
         inventory = new Inventory();
@@ -30,6 +30,11 @@ public class FPcontroller : MonoBehaviour
         uiInvetory.SetPlayer(this);
         ItemWorld.SpawnItemWorld(new Vector3(1, 0, 14), new Item {itemType = Item.ItemType.Crystal, amount = 1});
         ItemWorld.SpawnItemWorld(new Vector3(1, 0, 17), new Item {itemType = Item.ItemType.Crystal, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 15), new Item {itemType = Item.ItemType.DoubleCannon, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 19), new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 21), new Item {itemType = Item.ItemType.DoubleCannon, amount = 1});
+        ItemWorld.SpawnItemWorld(new Vector3(1, 0, 22), new Item {itemType = Item.ItemType.DoubleCannon, amount = 1});
+
     }
     
     void Start()
@@ -43,11 +48,20 @@ public class FPcontroller : MonoBehaviour
         ItemWorld itemWorld = other.GetComponent<ItemWorld>();
         if (itemWorld != null)
         {
-            inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();
+            if (uiInvetory.isFull)
+            {
+                Debug.Log("Esta lleno");
+            }
+            else
+            {
+                inventory.AddItem(itemWorld.GetItem());
+                itemWorld.DestroySelf();
+                
+            }
+            
+            
         }
         
-        Debug.Log(other.gameObject.tag);
     }
     
     // Update is called once per frame
@@ -58,6 +72,7 @@ public class FPcontroller : MonoBehaviour
         v_mouse += mVertical * Input.GetAxis("Mouse Y");
 
         v_mouse = Mathf.Clamp(v_mouse, minRotation, maxRotation);
+        
         cam.transform.localEulerAngles = new Vector3(-v_mouse, 0,0);
         transform.Rotate(0, h_mouse, 0);
         
