@@ -11,12 +11,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorsDetection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -32,9 +42,24 @@
         <option value="$PROJECT_DIR$/Assets/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/DoorsDetection.cs" />
         <option value="$PROJECT_DIR$/Assets/DoorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoorController.cs" />
         <option value="$PROJECT_DIR$/Assets/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Items.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CharacterInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryDB.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryItemInterface.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryDos.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemAssets.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" />
       </list>
     </option>
   </component>
@@ -51,6 +76,7 @@
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys_rider" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -87,6 +113,18 @@
       <workItem from="1605446118565" duration="524000" />
       <workItem from="1605446703451" duration="651000" />
       <workItem from="1605537359515" duration="2897000" />
+      <workItem from="1605910617404" duration="24000" />
+      <workItem from="1605910656595" duration="283000" />
+      <workItem from="1605911026769" duration="1599000" />
+      <workItem from="1605912899287" duration="1037000" />
+      <workItem from="1605979069978" duration="862000" />
+      <workItem from="1605980106730" duration="1926000" />
+      <workItem from="1606853129569" duration="2531000" />
+      <workItem from="1606855889092" duration="18306000" />
+      <workItem from="1607019389284" duration="8311000" />
+      <workItem from="1607083929530" duration="1932000" />
+      <workItem from="1607091779548" duration="13201000" />
+      <workItem from="1607115657123" duration="1098000" />
     </task>
     <servers />
   </component>
@@ -112,25 +150,17 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="794" y="276" key="RiderGenerateDialog" timestamp="1595352027300">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state x="461" y="167" key="SettingsEditor" timestamp="1607027739441">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="794" y="276" key="RiderGenerateDialog/0.40.1920.1040/-1680.74.1680.1010@0.40.1920.1040" timestamp="1595352027300" />
-    <state x="-1845" y="13" width="1547" height="1027" maximized="true" key="dock-window-1" timestamp="1595003230733">
-      <screen x="-1680" y="74" width="1680" height="1010" />
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607027739441" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1607112304356">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="-1845" y="13" width="1547" height="1027" maximized="true" key="dock-window-1/0.40.1920.1040/-1680.74.1680.1010@0.40.1920.1040" timestamp="1595003230733" />
-    <state x="638" y="159" width="644" height="801" key="find.popup" timestamp="1595002763638">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state x="624" y="254" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607112304356" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1607112307180">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="638" y="159" width="644" height="801" key="find.popup/0.40.1920.1040/-1680.74.1680.1010@0.40.1920.1040" timestamp="1595002763638" />
-    <state x="616" y="260" key="run.anything.popup" timestamp="1595000473794">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state x="616" y="260" key="run.anything.popup/0.40.1920.1040/-1680.74.1680.1010@0.40.1920.1040" timestamp="1595000473794" />
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1595352724928">
-      <screen x="0" y="40" width="1920" height="1040" />
-    </state>
-    <state x="623" y="265" width="672" height="678" key="search.everywhere.popup/0.40.1920.1040/-1680.74.1680.1010@0.40.1920.1040" timestamp="1595352724928" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607112307180" />
   </component>
 </project>

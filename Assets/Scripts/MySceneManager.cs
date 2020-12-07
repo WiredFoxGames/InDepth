@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 public class MySceneManager : MonoBehaviour
 {
     //Variables.
-    public static MySceneManager istance = null;
+    public static MySceneManager instance;
     
     //This is for instanciate the manager.
     private void Awake()
     {
-        istance = this;
+        instance = this;
     }
     //This method load the scene of the base. 
     public void Base()
