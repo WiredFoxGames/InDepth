@@ -31,6 +31,7 @@ public class Item {
             case ItemType.Pearl: return ItemAssets.Instance.pearlSprite;
             case ItemType.Meat: return ItemAssets.Instance.meatSprite;
             case ItemType.H2O: return ItemAssets.Instance.h2OSprite;
+            case ItemType.Health: return ItemAssets.Instance.healthSprite;
             case ItemType.LaCanicadora: return ItemAssets.Instance.laCanicadoraSprite;
             case ItemType.ElSuspenso: return ItemAssets.Instance.elSuspensoSprite;
             case ItemType.DoubleCannon: return ItemAssets.Instance.doubleCannonSprite;
@@ -64,8 +65,7 @@ public class Item {
             case ItemType.DoubleCannon: return 20;
             case ItemType.LaCanicadora: return 30;
             case ItemType.Health: return 0;
-            case ItemType.Iron: return 0;
-            case ItemType.ElSuspenso: return 40;
+         case ItemType.ElSuspenso: return 40;
        }
    }
    
@@ -77,7 +77,6 @@ public class Item {
          case ItemType.DoubleCannon: return 5;
          case ItemType.LaCanicadora: return 10;
          case ItemType.Health: return 5;
-         case ItemType.Iron: return 5;
          case ItemType.ElSuspenso: return 30;
       }
    }
@@ -91,7 +90,6 @@ public class Item {
          case ItemType.DoubleCannon: return 10;
          case ItemType.LaCanicadora: return 15;
          case ItemType.Health: return 5;
-         case ItemType.Iron: return 5;
          case ItemType.ElSuspenso: return 30;
       }
    }
@@ -104,7 +102,6 @@ public class Item {
          case ItemType.DoubleCannon: return 0;
          case ItemType.LaCanicadora: return 1;
          case ItemType.Health: return 0;
-         case ItemType.Iron: return 0;
          case ItemType.ElSuspenso: return 0;
       }
    }
@@ -117,7 +114,6 @@ public class Item {
          case ItemType.DoubleCannon: return 0;
          case ItemType.LaCanicadora: return 0;
          case ItemType.Health: return 15;
-         case ItemType.Iron: return 10;
          case ItemType.ElSuspenso: return 0;
       }
    }

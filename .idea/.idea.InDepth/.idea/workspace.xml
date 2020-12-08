@@ -13,7 +13,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemWorld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
@@ -21,9 +23,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,13 +64,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
       </list>
     </option>
   </component>
@@ -135,7 +139,8 @@
       <workItem from="1607134005714" duration="534000" />
       <workItem from="1607178080428" duration="11304000" />
       <workItem from="1607339037899" duration="17249000" />
-      <workItem from="1607368672265" duration="16690000" />
+      <workItem from="1607368672265" duration="18469000" />
+      <workItem from="1607436624429" duration="12837000" />
     </task>
     <servers />
   </component>
@@ -165,17 +170,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607027739441" />
-    <state x="627" y="257" width="666" height="536" key="find.popup" timestamp="1607366944052">
+    <state x="627" y="257" width="666" height="536" key="find.popup" timestamp="1607451620125">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="627" y="257" width="666" height="536" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607366944052" />
+    <state x="627" y="257" width="666" height="536" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607451620125" />
     <state x="624" y="254" key="run.anything.popup" timestamp="1607112304356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="624" y="254" key="run.anything.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607112304356" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1607125103653">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1607453068597">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607125103653" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607453068597" />
   </component>
 </project>

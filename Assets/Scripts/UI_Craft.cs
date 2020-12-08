@@ -61,6 +61,7 @@ public class UI_Craft : MonoBehaviour
     private void TryCraftItem(Item.ItemType itemType)
     {
         craftCustomer.CraftItem(itemType);
+
     }
 
     public void Show(ICrafter craftCustomer)

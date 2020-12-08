@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
     private float h_mouse; // Horizontal mouse
     private float v_mouse; // Vertical mouse
     private Inventory inventory; // Call class inventory
+    private int rockAmount;
+    public event EventHandler OnAmountChanged;
     
     //Call everytime 
     private void Awake()
@@ -106,8 +109,243 @@ public class FPcontroller : MonoBehaviour, ICrafter
         return transform.position;
     }
 
+    public int GetRockAmount()
+    {
+        return rockAmount;
+    }
+
     public void CraftItem(Item.ItemType itemType)
     {
-        Debug.Log("Crafteando item" + itemType);
+        Item rockDos = new Item();
+        Item crystalDos = new Item();
+        Item ironDos = new Item();
+        Item pearlDos = new Item();
+        Item meatDos = new Item();
+        int rockRestante = 0;
+        int crystalRestante = 0;
+        int ironRestante = 0;
+        int pearlRestante = 0;
+        int meatRestante = 0;
+       
+        bool canCraft = false;
+        if (itemType == Item.ItemType.LaCanicadora)
+        {
+            foreach (Item rock in inventory.GetItemList())
+            {
+                if (rock.itemType == Item.ItemType.Rock && rock.amount >= 30)
+                {
+                    rockRestante = rock.amount - 30;
+                    foreach (Item crystal in inventory.GetItemList())
+                    {
+                        if (crystal.itemType == Item.ItemType.Crystal && crystal.amount >= 10)
+                        {
+                            crystalRestante = crystal.amount - 10;
+                            foreach (Item iron in inventory.GetItemList())
+                            {
+                                if (iron.itemType == Item.ItemType.Iron && iron.amount >= 15)
+                                {
+                                    ironRestante = iron.amount - 15;
+                                    foreach (Item pearl in inventory.GetItemList())
+                                    {
+                                        if (pearl.itemType == Item.ItemType.Pearl && pearl.amount >= 1)
+                                        {
+                                            pearlRestante = pearl.amount - 1;
+                                            canCraft = true;
+                                            rockDos = rock;
+                                            crystalDos = crystal;
+                                            ironDos = iron;
+                                            pearlDos = pearl;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
+            if (canCraft)
+            {
+                inventory.AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
+                inventory.RemoveItem(rockDos);
+                inventory.RemoveItem(crystalDos);
+                inventory.RemoveItem(ironDos);
+                inventory.RemoveItem(pearlDos);
+                inventory.AddItem(new Item {itemType = Item.ItemType.Rock, amount = rockRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
+                
+
+            }
+        }
+        
+        if (itemType == Item.ItemType.DoubleCannon)
+        {
+            foreach (Item rock in inventory.GetItemList())
+            {
+                if (rock.itemType == Item.ItemType.Rock && rock.amount >= 20)
+                {
+                    rockRestante = rock.amount - 20;
+                    foreach (Item crystal in inventory.GetItemList())
+                    {
+                        if (crystal.itemType == Item.ItemType.Crystal && crystal.amount >= 5)
+                        {
+                            crystalRestante = crystal.amount - 5;
+                            foreach (Item iron in inventory.GetItemList())
+                            {
+                                if (iron.itemType == Item.ItemType.Iron && iron.amount >= 10)
+                                {
+                                    ironRestante = iron.amount - 10;
+                                    foreach (Item pearl in inventory.GetItemList())
+                                    {
+                                        if (pearl.itemType == Item.ItemType.Pearl && pearl.amount >= 0)
+                                        {
+                                            pearlRestante = pearl.amount - 0;
+                                            canCraft = true;
+                                            rockDos = rock;
+                                            crystalDos = crystal;
+                                            ironDos = iron;
+                                            pearlDos = pearl;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
+            if (canCraft)
+            {
+                inventory.AddItem(new Item {itemType = Item.ItemType.DoubleCannon, amount = 1});
+                inventory.RemoveItem(rockDos);
+                inventory.RemoveItem(crystalDos);
+                inventory.RemoveItem(ironDos);
+                inventory.RemoveItem(pearlDos);
+                inventory.AddItem(new Item {itemType = Item.ItemType.Rock, amount = rockRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
+                
+
+            }
+        }
+
+        if (itemType == Item.ItemType.ElSuspenso)
+        {
+            foreach (Item rock in inventory.GetItemList())
+            {
+                if (rock.itemType == Item.ItemType.Rock && rock.amount >= 40)
+                {
+                    rockRestante = rock.amount - 40;
+                    foreach (Item crystal in inventory.GetItemList())
+                    {
+                        if (crystal.itemType == Item.ItemType.Crystal && crystal.amount >= 30)
+                        {
+                            crystalRestante = crystal.amount - 30;
+                            foreach (Item iron in inventory.GetItemList())
+                            {
+                                if (iron.itemType == Item.ItemType.Iron && iron.amount >= 30)
+                                {
+                                    ironRestante = iron.amount - 30;
+                                    foreach (Item pearl in inventory.GetItemList())
+                                    {
+                                        if (pearl.itemType == Item.ItemType.Pearl && pearl.amount >= 0)
+                                        {
+                                            pearlRestante = pearl.amount - 0;
+                                            canCraft = true;
+                                            rockDos = rock;
+                                            crystalDos = crystal;
+                                            ironDos = iron;
+                                            pearlDos = pearl;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            if (canCraft)
+            {
+                inventory.AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
+                inventory.RemoveItem(rockDos);
+                inventory.RemoveItem(crystalDos);
+                inventory.RemoveItem(ironDos);
+                inventory.RemoveItem(pearlDos);
+                inventory.AddItem(new Item {itemType = Item.ItemType.Rock, amount = rockRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
+
+
+            }
+        }
+        
+        if (itemType == Item.ItemType.Health)
+        {
+            foreach (Item rock in inventory.GetItemList())
+            {
+                if (rock.itemType == Item.ItemType.Rock && rock.amount >= 0)
+                {
+                    rockRestante = rock.amount - 0;
+                    foreach (Item crystal in inventory.GetItemList())
+                    {
+                        if (crystal.itemType == Item.ItemType.Crystal && crystal.amount >= 5)
+                        {
+                            crystalRestante = crystal.amount - 5;
+                            foreach (Item iron in inventory.GetItemList())
+                            {
+                                if (iron.itemType == Item.ItemType.Iron && iron.amount >= 5)
+                                {
+                                    ironRestante = iron.amount - 5;
+                                    foreach (Item meat in inventory.GetItemList())
+                                    {
+                                        if (meat.itemType == Item.ItemType.Meat && meat.amount >= 15)
+                                        {
+                                            meatRestante = meat.amount - 15;
+                                            canCraft = true;
+                                            rockDos = rock;
+                                            crystalDos = crystal;
+                                            ironDos = iron;
+                                            meatDos = meat;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            if (canCraft)
+            {
+                inventory.AddItem(new Item {itemType = Item.ItemType.Health, amount = 1});
+                inventory.RemoveItem(rockDos);
+                inventory.RemoveItem(crystalDos);
+                inventory.RemoveItem(ironDos);
+                inventory.RemoveItem(meatDos);
+                inventory.AddItem(new Item {itemType = Item.ItemType.Rock, amount = rockRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
+                inventory.AddItem(new Item {itemType = Item.ItemType.Meat, amount = meatRestante});
+
+
+            }
+        }
+        
+        
     }
+
+    public bool TryCraftItem(int spendRockAmount)
+    {
+        return false;
+    }
+    
 }

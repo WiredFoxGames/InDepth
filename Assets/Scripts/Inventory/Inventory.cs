@@ -11,18 +11,12 @@ public class Inventory
     public Inventory()
     {
         itemList = new List<Item>();
-        AddItem(new Item {itemType = Item.ItemType.Iron, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Crystal, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Meat, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-
+        AddItem(new Item {itemType = Item.ItemType.Iron, amount = 150});
+        AddItem(new Item {itemType = Item.ItemType.Crystal, amount = 150});
+        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 150});
+        AddItem(new Item {itemType = Item.ItemType.Pearl, amount = 150});
+        AddItem(new Item {itemType = Item.ItemType.Meat, amount = 150});
+        
     }
 
     public void AddItem(Item item)
@@ -81,4 +75,6 @@ public class Inventory
     {
         return itemList;
     }
+
+   
 }
