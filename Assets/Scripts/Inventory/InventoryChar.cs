@@ -36,7 +36,7 @@ public class InventoryChar : MonoBehaviour
     void stopCam()
     {
         
-        cam.transform.localEulerAngles = new Vector3(1, 1,1);
+        //cam.transform.localEulerAngles = new Vector3(1, 1,1);
         
     }
 }

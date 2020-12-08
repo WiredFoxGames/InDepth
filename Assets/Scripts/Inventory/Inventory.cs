@@ -22,37 +22,7 @@ public class Inventory
         AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
         AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Rock, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.Pearl, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.H2O, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.H2O, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.LaCanicadora, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-        AddItem(new Item {itemType = Item.ItemType.ElSuspenso, amount = 1});
-       
+
     }
 
     public void AddItem(Item item)

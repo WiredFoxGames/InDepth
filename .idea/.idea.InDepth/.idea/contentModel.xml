@@ -26,8 +26,6 @@
             <e p="BoidGroup.cs" t="Include" />
             <e p="BoidUser.cs" t="Include" />
           </e>
-          <e p="Button_UI.cs" t="Include" />
-          <e p="CharacterInventory.cs" t="Include" />
           <e p="Chunk.cs" t="Include" />
           <e p="ColourGenerator.cs" t="Include" />
           <e p="Compute" t="Include">
@@ -46,21 +44,33 @@
             <e p="NoiseDensity.cs" t="Include" />
             <e p="SphereDensity.cs" t="Include" />
           </e>
-          <e p="DoorController.cs" t="Include" />
-          <e p="DoorsDetection.cs" t="Include" />
-          <e p="FPcontroller.cs" t="Include" />
+          <e p="Doors" t="Include">
+            <e p="DoorController.cs" t="Include" />
+            <e p="DoorsDetection.cs" t="Include" />
+          </e>
           <e p="Helper" t="Include">
             <e p="ConditionalHideAttribute.cs" t="Include" />
           </e>
-          <e p="InteractController.cs" t="Include" />
-          <e p="Inventory.cs" t="Include" />
+          <e p="ICrafter.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="Button_UI.cs" t="Include" />
+            <e p="Inventory.cs" t="Include" />
+            <e p="InventoryChar.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="ItemAssets.cs" t="Include" />
+            <e p="ItemWorld.cs" t="Include" />
+            <e p="UI_Inventory.cs" t="Include" />
+          </e>
           <e p="Inventory_Open.cs" t="Include" />
-          <e p="InventoryChar.cs" t="Include" />
-          <e p="Item.cs" t="Include" />
-          <e p="ItemAssets.cs" t="Include" />
-          <e p="ItemWorld.cs" t="Include" />
+          <e p="Managers" t="Include">
+            <e p="MySceneManager.cs" t="Include" />
+          </e>
           <e p="MeshGenerator.cs" t="Include" />
-          <e p="MySceneManager.cs" t="Include" />
+          <e p="Player" t="Include">
+            <e p="CharacterInventory.cs" t="Include" />
+            <e p="FPcontroller.cs" t="Include" />
+            <e p="InteractController.cs" t="Include" />
+          </e>
           <e p="Shaders" t="Include">
             <e p="SeaWorld.shader" t="Include" />
             <e p="Terrain.shader" t="Include" />
@@ -74,7 +84,7 @@
               <e p="WeaponManager.cs" t="Include" />
             </e>
           </e>
-          <e p="UI_Inventory.cs" t="Include" />
+          <e p="UI_Craft.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">

@@ -11,25 +11,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorsDetection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemWorld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -55,15 +52,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryItemInterface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryDos.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemAssets.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Button_UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ItemWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" />
       </list>
     </option>
   </component>
@@ -131,7 +134,8 @@
       <workItem from="1607115657123" duration="5858000" />
       <workItem from="1607134005714" duration="534000" />
       <workItem from="1607178080428" duration="11304000" />
-      <workItem from="1607339037899" duration="16191000" />
+      <workItem from="1607339037899" duration="17249000" />
+      <workItem from="1607368672265" duration="16690000" />
     </task>
     <servers />
   </component>

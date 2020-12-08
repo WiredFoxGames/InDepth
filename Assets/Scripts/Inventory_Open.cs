@@ -6,18 +6,38 @@ using UnityEngine;
 public class Inventory_Open : MonoBehaviour
 {
     // Start is called before the first frame update
-    private bool _inventoryEnabled;
-    public GameObject inventory;
+    /*private bool _inventoryEnabled;
+    public GameObject inventory;*/
+    [SerializeField] private UI_Craft uiCraft;
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        ICrafter craftCustomer = other.GetComponent<ICrafter>();
+        if (craftCustomer != null)
+        {
+            uiCraft.Show(craftCustomer);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        ICrafter craftCustomer = other.GetComponent<ICrafter>();
+        if (craftCustomer != null)
+        {
+            uiCraft.Hide();
+        }
+    }
+
     void Start()
     {
-    }
+    }    
 
     // Update is called once per frame
     void Update()
     {
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -41,6 +61,6 @@ public class Inventory_Open : MonoBehaviour
         {
             inventory.SetActive(false);
         }
-    }
+    }*/
 
 }
