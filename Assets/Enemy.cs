@@ -81,6 +81,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision target)
+    {
+        if (target.gameObject.CompareTag("Player"))
+        {
+            target.gameObject.GetComponent<Submarine>().TakeDamage(damage);
+        }
+    }
+
 
     // Update is called once per frame
     void Update()

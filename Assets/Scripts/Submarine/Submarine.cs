@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Submarine : MonoBehaviour
 {
+    public int maxHealth = 100;
+    public int curHealth = 100;
+
     public float maxSpeed = 5;
     public float maxBooster = 500;
     public float maxPitchSpeed = 3;
@@ -39,25 +42,42 @@ public class Submarine : MonoBehaviour
 
     void Update()
     {
-        float accelDir = 0;
-        if (Input.GetKey(KeyCode.Q))
+        if (curHealth > 0)
         {
-            accelDir -= 1;
-        }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            accelDir += 1;
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (curBooster >= maxBooster)
+            float accelDir = 0;
+            if (Input.GetKey(KeyCode.Q))
             {
-                boosted = true;
+                accelDir -= 1;
             }
-        }
 
+            if (Input.GetKey(KeyCode.E))
+            {
+                accelDir += 1;
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (curBooster >= maxBooster)
+                {
+                    boosted = true;
+                }
+            }
+        
+            MovementManager(accelDir);
+        }
+        
+        else
+        {
+            OnDeath();
+        }
+        
+        
+
+    }
+
+    public void MovementManager(float accelDir)
+    {
+        
         if (boosted)
         {
             curBooster -= 5;
@@ -75,14 +95,12 @@ public class Submarine : MonoBehaviour
         {
             if (curBooster < maxBooster)
             {
-                curBooster += 2;
+                curBooster += 1;
             }
             currentSpeed += acceleration * Time.deltaTime * accelDir;
             currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
             speedPercent = currentSpeed / maxSpeed;
         }
-
-        Debug.Log(curBooster +" - " + maxBooster);
 
         Vector3 targetVelocity = transform.forward * currentSpeed;
         velocity = Vector3.Lerp(velocity, targetVelocity, Time.deltaTime * smoothSpeed);
@@ -102,5 +120,15 @@ public class Submarine : MonoBehaviour
         propeller.Rotate(Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         propSpinMat.color =
             new Color(propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
+    }
+
+    public void OnDeath()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        curHealth -= damage;
     }
 }
