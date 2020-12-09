@@ -57,6 +57,7 @@ public class SpawnManager : MonoBehaviour
         {
             GameObject currPlant = Instantiate(plantSpawner, rayHit.point, transform.rotation);
             currPlant.transform.localScale = new Vector3(rndScale, rndHeight, rndScale);
+            currPlant.transform.rotation = Quaternion.LookRotation(Vector3.left);
             currentVegetation.Add(currPlant);
         }
     }

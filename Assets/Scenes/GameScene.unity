@@ -131,9 +131,10 @@ GameObject:
   - component: {fileID: 333592787}
   - component: {fileID: 333592786}
   - component: {fileID: 333592785}
-  m_Layer: 0
-  m_Name: testcube
-  m_TagString: Untagged
+  - component: {fileID: 333592790}
+  m_Layer: 10
+  m_Name: enemyMelee
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,12 +221,34 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333592784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.27, y: 20.6, z: -7.46}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 7.27, y: 20.6, z: -7.346}
+  m_LocalScale: {x: 0.34282568, y: 0.30591974, z: 1.1578112}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333592790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333592784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c823ed45c27114db55df87e18c3fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isRanged: 0
+  health: 100
+  damage: 1
+  speed: 4
+  steer: 10
+  detectRadius: 25
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  wm: {fileID: 0}
 --- !u!4 &540949059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3215657758073903921, guid: 70774cb31ae0e494cb24f0eb04b2ead4,
@@ -629,7 +652,7 @@ MonoBehaviour:
   spawnHeight: 50
   maxRayDist: 500
   spawnEntityRadious: 40
-  spawnVegetationRadious: 120
+  spawnVegetationRadious: 50
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -666,23 +689,10 @@ MonoBehaviour:
   generateColliders: 1
   isoLevel: 8
   boundsSize: 10
-  offset: {x: 18, y: 18, z: 0}
+  offset: {x: 4, y: 282, z: 139}
   numPointsPerAxis: 32
   showBoundsGizmo: 1
   boundsGizmoCol: {r: 1, g: 1, b: 1, a: 0.09803922}
---- !u!135 &1684670000
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684669997}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 65.714386
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1684670001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +801,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3232226090189845381, guid: 1cbc87792e42a0b41be5a22693951567,
         type: 3}
+    - target: {fileID: 3215657758073903920, guid: 70774cb31ae0e494cb24f0eb04b2ead4,
+        type: 3}
+      propertyPath: maxBooster
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3215657758073903921, guid: 70774cb31ae0e494cb24f0eb04b2ead4,
         type: 3}
       propertyPath: m_LocalPosition.x

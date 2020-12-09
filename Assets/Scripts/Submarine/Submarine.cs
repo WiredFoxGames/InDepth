@@ -2,11 +2,16 @@
 using UnityEngine;
 
 
-public class Submarine : MonoBehaviour {
+public class Submarine : MonoBehaviour
+{
     public float maxSpeed = 5;
+    public float maxBooster = 500;
     public float maxPitchSpeed = 3;
     public float maxTurnSpeed = 50;
     public float acceleration = 2;
+    float speedPercent = 0;
+    private float curBooster = 100;
+    private bool boosted = false;
 
     public float smoothSpeed = 3;
     public float smoothTurnSpeed = 3;
@@ -23,19 +28,13 @@ public class Submarine : MonoBehaviour {
     float pitchVelocity;
     float currentSpeed;
     public Material propSpinMat;
-    
-    // Weapons
-    public LayerMask ignoreMask;
-    ArrayList bulletArray = new ArrayList();
-    ArrayList bulletDumpster = new ArrayList();
-    
+
     public GameObject bullet;
 
-    void Start ()
+    void Start()
     {
         //Cursor.visible = false;
-        currentSpeed = maxSpeed;
-        ignoreMask = LayerMask.GetMask("Player");
+        currentSpeed = (int)(maxSpeed);
     }
 
     void Update()
@@ -51,9 +50,39 @@ public class Submarine : MonoBehaviour {
             accelDir += 1;
         }
 
-        currentSpeed += acceleration * Time.deltaTime * accelDir;
-        currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
-        float speedPercent = currentSpeed / maxSpeed;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            if (curBooster >= maxBooster)
+            {
+                boosted = true;
+            }
+        }
+
+        if (boosted)
+        {
+            curBooster -= 5;
+            currentSpeed += acceleration * Time.deltaTime * accelDir;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
+            currentSpeed = currentSpeed * 3;
+            speedPercent = currentSpeed / maxSpeed;
+
+            if (curBooster < 20)
+            {
+                boosted = false;
+            }
+        }
+        else
+        {
+            if (curBooster < maxBooster)
+            {
+                curBooster += 2;
+            }
+            currentSpeed += acceleration * Time.deltaTime * accelDir;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
+            speedPercent = currentSpeed / maxSpeed;
+        }
+
+        Debug.Log(curBooster +" - " + maxBooster);
 
         Vector3 targetVelocity = transform.forward * currentSpeed;
         velocity = Vector3.Lerp(velocity, targetVelocity, Time.deltaTime * smoothSpeed);
@@ -73,6 +102,5 @@ public class Submarine : MonoBehaviour {
         propeller.Rotate(Vector3.forward * Time.deltaTime * propellerSpeedFac * speedPercent, Space.Self);
         propSpinMat.color =
             new Color(propSpinMat.color.r, propSpinMat.color.g, propSpinMat.color.b, speedPercent * .3f);
-        
     }
 }

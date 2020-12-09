@@ -62,9 +62,9 @@ public class MeshGenerator : MonoBehaviour {
     
     void Awake ()
     {
-        int rndX = Random.Range(0, 32);
-        int rndY = Random.Range(0, 32);
-        int rndZ = Random.Range(0, 32);
+        int rndX = Random.Range(0, 512);
+        int rndY = Random.Range(0, 512);
+        int rndZ = Random.Range(0, 512);
         
         offset = new Vector3(rndX,rndY,rndZ);
         
