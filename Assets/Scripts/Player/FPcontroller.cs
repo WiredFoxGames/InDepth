@@ -2,7 +2,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FPcontroller : MonoBehaviour, ICrafter
 {
@@ -24,7 +26,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
     private Inventory inventory; // Call class inventory
     private int rockAmount;
     public event EventHandler OnAmountChanged;
-    
+    public GameObject ui_popup;
+    public TextMeshProUGUI notResource;
+    public Image itemRes;
+    private float popupTime = 1.2f;
+    public float timer = 0.0f;
+
+
     //Call everytime 
     private void Awake()
     {
@@ -69,6 +77,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
     // Update is called once per frame
     void Update()
     {
+        
         // All about camera moves
         h_mouse = mHorizontal * Input.GetAxis("Mouse X");
         v_mouse += mVertical * Input.GetAxis("Mouse Y");
@@ -102,17 +111,22 @@ public class FPcontroller : MonoBehaviour, ICrafter
         //Set the gravity with deltatime to get a good smooth jump
         move.y -= gravity * Time.deltaTime;
         characterController.Move(move * Time.deltaTime);
+        
+        //Timer for popup
+        timer -= Time.deltaTime;
+
+        if (timer < 0)
+        {
+            HidePopup();
+        }
+        
     }
     
     //Get the position of the player.
     public Vector3 GetPosition() {
         return transform.position;
     }
-
-    public int GetRockAmount()
-    {
-        return rockAmount;
-    }
+    
 
     public void CraftItem(Item.ItemType itemType)
     {
@@ -155,6 +169,9 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             crystalDos = crystal;
                                             ironDos = iron;
                                             pearlDos = pearl;
+                                            ShowPopup();
+                                            notResource.SetText("You crafted: LaCanicadora" );
+
                                         }
                                     }
                                 }
@@ -178,6 +195,11 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
                 
 
+            }
+            else
+            {
+                ShowPopup();
+                notResource.SetText("Not enough resources.");
             }
         }
         
@@ -208,6 +230,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             crystalDos = crystal;
                                             ironDos = iron;
                                             pearlDos = pearl;
+                                            ShowPopup();
+                                            notResource.SetText("You crafted: DoubleCannon" );
                                         }
                                     }
                                 }
@@ -231,6 +255,11 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
                 
 
+            }
+            else
+            {
+                ShowPopup();
+                notResource.SetText("Not enough resources.");
             }
         }
 
@@ -261,6 +290,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             crystalDos = crystal;
                                             ironDos = iron;
                                             pearlDos = pearl;
+                                            ShowPopup();
+                                            notResource.SetText("You crafted: ElSuspenso" );
                                         }
                                     }
                                 }
@@ -284,6 +315,11 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
 
 
+            }
+            else
+            {
+                ShowPopup();
+                notResource.SetText("Not enough resources.");
             }
         }
         
@@ -314,13 +350,14 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             crystalDos = crystal;
                                             ironDos = iron;
                                             meatDos = meat;
+                                            ShowPopup();
+                                            notResource.SetText("You crafted: Health" );
                                         }
                                     }
                                 }
                             }
                         }
                     }
-
                 }
             }
 
@@ -337,10 +374,23 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Meat, amount = meatRestante});
 
 
+            }else
+            {
+                ShowPopup();
+                notResource.SetText("Not enough resources.");
             }
         }
-        
-        
+    }
+
+    void ShowPopup()
+    {
+        ui_popup.SetActive(true);
+        timer = popupTime;
+    }
+
+    void HidePopup()
+    {
+        ui_popup.SetActive(false);
     }
 
     public bool TryCraftItem(int spendRockAmount)

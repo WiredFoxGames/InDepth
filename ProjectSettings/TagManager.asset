@@ -9,6 +9,8 @@ TagManager:
   - Floor
   - Enemy
   - EnemyBullet
+  - PlayText
+  - ExitText
   layers:
   - Default
   - TransparentFX
