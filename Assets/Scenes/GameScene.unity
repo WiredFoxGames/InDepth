@@ -687,9 +687,11 @@ MonoBehaviour:
   shader: {fileID: 7200000, guid: e6675a5747764487687871eed95a316b, type: 3}
   mat: {fileID: 2100000, guid: 9f4c41034b0a0402ebc0112bf6b727f1, type: 2}
   generateColliders: 1
+  spawnBoids: 1
+  randomOffset: 1
   isoLevel: 8
   boundsSize: 10
-  offset: {x: 4, y: 282, z: 139}
+  offset: {x: 402, y: 20, z: 367}
   numPointsPerAxis: 32
   showBoundsGizmo: 1
   boundsGizmoCol: {r: 1, g: 1, b: 1, a: 0.09803922}

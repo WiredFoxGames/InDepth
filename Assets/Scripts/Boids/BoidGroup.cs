@@ -30,10 +30,14 @@ public class BoidGroup : MonoBehaviour
     float squaredSeparationRadius;
     public float SquaredSeparationRadius => squaredSeparationRadius;
 
+    private Vector3 startposition;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        startposition = transform.position;
+        
         // Squaring is a complex operation, by manually doing the operations ourselves we can improve performance
         squaredMaxSpeed = maxSpeed * maxSpeed;
         squaredNearObjRadius = nearObjRadius * nearObjRadius;
@@ -52,6 +56,7 @@ public class BoidGroup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position = startposition;
         foreach (BoidUser boid in boidGroup)
         {
             List<Transform> context = GetNearbyObjects(boid);

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Chunk : MonoBehaviour {
     public Vector3Int coord;
@@ -20,7 +22,14 @@ public class Chunk : MonoBehaviour {
     public void DestroyOrDisable () {
         if (Application.isPlaying) {
             mesh.Clear ();
-            boidSpawner.SetActive(false);
+            try
+            {
+                boidSpawner.SetActive(false);
+            }
+            catch (Exception e)
+            {
+            }
+            
             gameObject.SetActive (false);
             
         } else {
@@ -63,7 +72,15 @@ public class Chunk : MonoBehaviour {
         if (r == 0)
         {
             Vector3 fishpos = new Vector3(coord.x * 16, coord.y * 16,coord.z * 16);
-            instantiatedSpawner = Instantiate(boidSpawner, fishpos, Quaternion.identity, transform);
+            try
+            {
+                instantiatedSpawner = Instantiate(boidSpawner, fishpos, Quaternion.identity, transform);
+            }
+            catch
+            {
+                
+            }
+            
         }
         
         

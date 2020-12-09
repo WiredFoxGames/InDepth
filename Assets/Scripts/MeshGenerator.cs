@@ -26,6 +26,8 @@ public class MeshGenerator : MonoBehaviour {
     public ComputeShader shader;
     public Material mat;
     public bool generateColliders;
+    public bool spawnBoids;
+    public bool randomOffset;
 
     [Header ("Voxel Settings")]
     public float isoLevel;
@@ -65,8 +67,11 @@ public class MeshGenerator : MonoBehaviour {
         int rndX = Random.Range(0, 512);
         int rndY = Random.Range(0, 512);
         int rndZ = Random.Range(0, 512);
-        
-        offset = new Vector3(rndX,rndY,rndZ);
+
+        if (randomOffset)
+        {
+            offset = new Vector3(rndX,rndY,rndZ);
+        }
         
         if (Application.isPlaying && !fixedMapSize) {
             InitVariableChunkStructures ();
@@ -367,7 +372,10 @@ public class MeshGenerator : MonoBehaviour {
         chunk.transform.parent = chunkHolder.transform;
         Chunk newChunk = chunk.AddComponent<Chunk> ();
         newChunk.coord = coord;
-        newChunk.boidSpawner = boidSpawner;
+        if (spawnBoids)
+        {
+            newChunk.boidSpawner = boidSpawner;
+        }
         return newChunk;
     }
 
