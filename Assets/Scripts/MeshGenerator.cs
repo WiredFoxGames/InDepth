@@ -1,6 +1,7 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [ExecuteInEditMode]
 public class MeshGenerator : MonoBehaviour {
@@ -50,8 +51,23 @@ public class MeshGenerator : MonoBehaviour {
     ComputeBuffer triCountBuffer;
 
     bool settingsUpdated;
+    private bool finishedLoading = false;
+    private int counter = 0;
 
-    void Awake () {
+
+    public bool LoadedStatus()
+    {
+        return finishedLoading;
+    }
+    
+    void Awake ()
+    {
+        int rndX = Random.Range(0, 512);
+        int rndY = Random.Range(0, 512);
+        int rndZ = Random.Range(0, 512);
+        
+        offset = new Vector3(rndX,rndY,rndZ);
+        
         if (Application.isPlaying && !fixedMapSize) {
             InitVariableChunkStructures ();
 
@@ -72,6 +88,16 @@ public class MeshGenerator : MonoBehaviour {
             RequestMeshUpdate ();
             settingsUpdated = false;
         }
+
+        if (!finishedLoading)
+        {
+            counter++;
+            if (counter > 512)
+            {
+                finishedLoading = true;
+            }
+        }
+        
     }
 
     public void Run () {
@@ -91,7 +117,7 @@ public class MeshGenerator : MonoBehaviour {
         if (!Application.isPlaying) {
             ReleaseBuffers ();
         }
-
+        
     }
 
     public void RequestMeshUpdate () {
@@ -325,6 +351,7 @@ public class MeshGenerator : MonoBehaviour {
                     }
 
                     chunks[chunks.Count - 1].SetUp (mat, true);
+                    
                 }
             }
         }
