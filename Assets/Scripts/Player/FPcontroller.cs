@@ -25,10 +25,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
     private float v_mouse; // Vertical mouse
     private Inventory inventory; // Call class inventory
     private int rockAmount;
-    public event EventHandler OnAmountChanged;
     public GameObject ui_popup;
     public TextMeshProUGUI notResource;
-    public Image itemRes;
     private float popupTime = 1.2f;
     public float timer = 0.0f;
 

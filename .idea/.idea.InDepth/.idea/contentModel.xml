@@ -99,6 +99,7 @@
             <e p="ItemAssets.cs" t="Include" />
             <e p="ItemWorld.cs" t="Include" />
             <e p="UI_Inventory.cs" t="Include" />
+            <e p="UI_InventorySub.cs" t="Include" />
           </e>
           <e p="Inventory_Open.cs" t="Include" />
           <e p="Managers" t="Include">
@@ -110,6 +111,7 @@
             <e p="FPcontroller.cs" t="Include" />
             <e p="InteractController.cs" t="Include" />
           </e>
+          <e p="SceneLoadingScript.cs" t="Include" />
           <e p="Shaders" t="Include">
             <e p="SeaWorld.shader" t="Include" />
             <e p="Terrain.shader" t="Include" />

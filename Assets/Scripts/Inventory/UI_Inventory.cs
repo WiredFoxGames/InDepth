@@ -14,6 +14,7 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private FPcontroller player;
+    private Submarine submarine;
     public bool isFull;
     private void Awake()
     {
@@ -24,6 +25,11 @@ public class UI_Inventory : MonoBehaviour
     public void SetPlayer(FPcontroller player)
     {
         this.player = player;
+    }
+
+    public void SetSubmarine(Submarine submarine)
+    {
+        this.submarine = submarine;
     }
     public void SetInventory(Inventory inventory)
     {

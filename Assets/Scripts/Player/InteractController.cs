@@ -13,7 +13,7 @@ public class InteractController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene("GameScene");
+                SceneManager.LoadScene("LoadingScreen");
             }
         }
         

@@ -16,6 +16,8 @@ public class Inventory
         AddItem(new Item {itemType = Item.ItemType.Rock, amount = 150});
         AddItem(new Item {itemType = Item.ItemType.Pearl, amount = 150});
         AddItem(new Item {itemType = Item.ItemType.Meat, amount = 150});
+       
+        
         
     }
 

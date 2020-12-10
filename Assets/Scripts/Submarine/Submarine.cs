@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 
 public class Submarine : MonoBehaviour
 {
+    [SerializeField] private UI_InventorySub uiInvetory;
+    private Inventory inventory;
+    
     public int maxHealth = 100;
     public int curHealth = 100;
 
@@ -38,8 +42,13 @@ public class Submarine : MonoBehaviour
     {
         //Cursor.visible = false;
         currentSpeed = (int)(maxSpeed);
+        
+        //Create the object inventory.    
+        inventory = new Inventory();
+        uiInvetory.SetInventory(inventory);
+        uiInvetory.SetSubmarine(this);
     }
-
+    
     void Update()
     {
         if (curHealth > 0)
@@ -130,5 +139,10 @@ public class Submarine : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curHealth -= damage;
+    }
+
+    public Vector3 GetPosition()
+    {
+        return transform.position;
     }
 }

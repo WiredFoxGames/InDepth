@@ -11,27 +11,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniVRM/Scripts/BlendShape/PreviewSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/IValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/ConditionalHidePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/GenericCallUtility/GenericExpressionCallFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/IStore/BytesStore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonBoolValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Doors/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TeleType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemWorld.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/BytesBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6312B0C4-D854-4C04-BF65-F0A668BFA3EE/65/020a8bab/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/glbTypes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -71,12 +86,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" />
       </list>
     </option>
   </component>
@@ -102,10 +122,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7520">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="7520" />
       <method v="2" />
     </configuration>
   </component>
@@ -148,7 +168,10 @@
       <workItem from="1607368672265" duration="18469000" />
       <workItem from="1607436624429" duration="13607000" />
       <workItem from="1607459908259" duration="27000" />
-      <workItem from="1607516807043" duration="9087000" />
+      <workItem from="1607516807043" duration="14059000" />
+      <workItem from="1607545854659" duration="130000" />
+      <workItem from="1607602024398" duration="8962000" />
+      <workItem from="1607625900268" duration="563000" />
     </task>
     <servers />
   </component>
@@ -174,14 +197,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom" timestamp="1607626347953">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607626347953" />
+    <state width="1877" height="352" key="GridCell.Tab.0.center" timestamp="1607626347953">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607626347953" />
+    <state width="1877" height="352" key="GridCell.Tab.0.left" timestamp="1607626347952">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607626347952" />
+    <state width="1877" height="352" key="GridCell.Tab.0.right" timestamp="1607626347953">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607626347953" />
     <state x="461" y="167" key="SettingsEditor" timestamp="1607027739441">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607027739441" />
-    <state x="627" y="257" width="666" height="536" key="find.popup" timestamp="1607451620125">
+    <state x="548" y="238" width="1014" height="812" key="find.popup" timestamp="1607612605975">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="627" y="257" width="666" height="536" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607451620125" />
+    <state x="548" y="238" width="1014" height="812" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607612605975" />
     <state x="624" y="254" key="run.anything.popup" timestamp="1607112304356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
