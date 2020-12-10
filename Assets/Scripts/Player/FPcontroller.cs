@@ -2,7 +2,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Json;
 using TMPro;
+using UniJSON;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -75,6 +78,10 @@ public class FPcontroller : MonoBehaviour, ICrafter
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            SaveGame();
+        }
         
         // All about camera moves
         h_mouse = mHorizontal * Input.GetAxis("Mouse X");
@@ -395,5 +402,24 @@ public class FPcontroller : MonoBehaviour, ICrafter
     {
         return false;
     }
-    
+
+    public void SaveGame()
+    {
+        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        var dict = new JsonFormatter();
+        dict.BeginMap();
+        foreach (Item item in inventory.GetItemList())
+        {
+            dict.Key(item.itemType.ToString()); dict.Value(item.amount);
+        }
+        dict.EndMap();
+
+        string json = dict.ToString();
+
+        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
+        {
+            outputFile.WriteLine(json);
+        }
+        Debug.Log(json);
+    }
 }
