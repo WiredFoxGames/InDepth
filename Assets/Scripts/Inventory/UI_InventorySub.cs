@@ -51,14 +51,12 @@ public class UI_InventorySub : MonoBehaviour
         float itemSlotCellSize = 82f;
         foreach (Item item in inventory.GetItemList())
         {
-            Debug.Log("adasda");
             RectTransform itemSlotRecTransform =
                 Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRecTransform.gameObject.SetActive(true);
             itemSlotRecTransform.GetComponent<Button_UI>().ClickFunc = () =>
             {
                 //usar item
-                Debug.Log("asda");
             };
             itemSlotRecTransform.GetComponent<Button_UI>().MouseRightClickFunc = () =>
             {

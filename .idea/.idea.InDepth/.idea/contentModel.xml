@@ -63,6 +63,7 @@
             <e p="BoidGroup.cs" t="Include" />
             <e p="BoidUser.cs" t="Include" />
           </e>
+          <e p="boostbar.cs" t="Include" />
           <e p="ButtonExit.cs" t="Include" />
           <e p="ButtonPlay.cs" t="Include" />
           <e p="Chunk.cs" t="Include" />
@@ -87,6 +88,7 @@
             <e p="DoorController.cs" t="Include" />
             <e p="DoorsDetection.cs" t="Include" />
           </e>
+          <e p="healthbar.cs" t="Include" />
           <e p="Helper" t="Include">
             <e p="ConditionalHideAttribute.cs" t="Include" />
           </e>

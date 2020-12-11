@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Submarine : MonoBehaviour
@@ -16,7 +17,7 @@ public class Submarine : MonoBehaviour
     public float maxPitchSpeed = 3;
     public float maxTurnSpeed = 50;
     public float acceleration = 2;
-    float speedPercent = 0;
+    private float speedPercent = 0;
     private float curBooster = 100;
     private bool boosted = false;
 
@@ -37,22 +38,23 @@ public class Submarine : MonoBehaviour
     public Material propSpinMat;
 
     public GameObject bullet;
+    public healthbar healthbar;
+    public boostbar boostbar;
 
     void Start()
     {
         //Cursor.visible = false;
         currentSpeed = (int)(maxSpeed);
-        
-        //Create the object inventory.    
-        inventory = new Inventory();
-        uiInvetory.SetInventory(inventory);
-        uiInvetory.SetSubmarine(this);
+        healthbar.SetMaxHealth(maxHealth);
+        boostbar.SetMaxBooster(maxBooster);
     }
     
     void Update()
     {
+        
         if (curHealth > 0)
         {
+            boostbar.SetBooster(curBooster);
             float accelDir = 0;
             if (Input.GetKey(KeyCode.Q))
             {
@@ -80,7 +82,6 @@ public class Submarine : MonoBehaviour
             OnDeath();
         }
         
-        
 
     }
 
@@ -94,6 +95,7 @@ public class Submarine : MonoBehaviour
             currentSpeed = Mathf.Clamp(currentSpeed, 0, maxSpeed);
             currentSpeed = currentSpeed * 3;
             speedPercent = currentSpeed / maxSpeed;
+            
 
             if (curBooster < 20)
             {
@@ -139,10 +141,12 @@ public class Submarine : MonoBehaviour
     public void TakeDamage(int damage)
     {
         curHealth -= damage;
+        healthbar.SetHealth(curHealth);
     }
 
     public Vector3 GetPosition()
     {
         return transform.position;
     }
+    
 }
