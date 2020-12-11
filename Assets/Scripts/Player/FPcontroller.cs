@@ -4,10 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
+using Newtonsoft.Json;
 using TMPro;
 using UniJSON;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 
 public class FPcontroller : MonoBehaviour, ICrafter
 {
@@ -49,6 +52,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
     {
         //Get the component CharacterController from inspector
         characterController = GetComponent<CharacterController>();
+        LoadGame();    
     }
 
     //When player collide with an item of the world
@@ -424,5 +428,24 @@ public class FPcontroller : MonoBehaviour, ICrafter
             
         }
         Debug.Log(json);
+    }
+
+    public void LoadGame()
+    {
+        string prueba;
+        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        using (StreamReader inputFile = new StreamReader(Path.Combine(docupath, "indepth.save")))
+        {
+            prueba = inputFile.ReadLine();
+            var values = JsonConvert.DeserializeObject<Dictionary<Item.ItemType, int>>(prueba);
+            foreach (var item in values)
+            {
+                inventory.AddItem(new Item {itemType  = item.Key, amount = item.Value});
+
+            }
+        }
+        
+        
+        
     }
 }

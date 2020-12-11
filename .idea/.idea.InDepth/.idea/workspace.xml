@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniVRM/Scripts/BlendShape/PreviewSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/IValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidUser.cs" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +40,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Button_UI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/BytesBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Weapon/WeaponManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6312B0C4-D854-4C04-BF65-F0A668BFA3EE/65/020a8bab/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/glbTypes.cs" root0="FORCE_HIGHLIGHTING" />
@@ -95,12 +98,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/healthbar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/boostbar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
       </list>
     </option>
   </component>
@@ -176,7 +179,7 @@
       <workItem from="1607545854659" duration="130000" />
       <workItem from="1607602024398" duration="8962000" />
       <workItem from="1607625900268" duration="563000" />
-      <workItem from="1607687721428" duration="1615000" />
+      <workItem from="1607687721428" duration="12039000" />
     </task>
     <servers />
   </component>
@@ -270,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607027739441" />
-    <state x="548" y="238" width="1014" height="812" key="find.popup" timestamp="1607612605975">
+    <state x="548" y="238" width="1014" height="812" key="find.popup" timestamp="1607696790473">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="548" y="238" width="1014" height="812" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607612605975" />
+    <state x="548" y="238" width="1014" height="812" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607696790473" />
     <state x="624" y="254" key="run.anything.popup" timestamp="1607112304356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
