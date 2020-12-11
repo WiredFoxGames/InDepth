@@ -81,6 +81,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
         if (Input.GetKeyDown(KeyCode.P))
         {
             SaveGame();
+            ShowPopup();
+            notResource.SetText("Progress saved!");
         }
         
         // All about camera moves
@@ -419,6 +421,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
         {
             outputFile.WriteLine(json);
+            
         }
         Debug.Log(json);
     }
