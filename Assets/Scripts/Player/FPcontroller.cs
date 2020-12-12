@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -9,7 +8,6 @@ using TMPro;
 using UniJSON;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 
 public class FPcontroller : MonoBehaviour, ICrafter
@@ -47,12 +45,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
         //Set the Inventory in the player
         uiInvetory.SetPlayer(this);
     }
+
     //Call at the start of the game.
     void Start()
     {
         //Get the component CharacterController from inspector
         characterController = GetComponent<CharacterController>();
-        LoadGame();    
+        LoadGame();
     }
 
     //When player collide with an item of the world
@@ -74,11 +73,9 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(itemWorld.GetItem());
                 itemWorld.DestroySelf();
             }
-
         }
-        
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -88,14 +85,14 @@ public class FPcontroller : MonoBehaviour, ICrafter
             ShowPopup();
             notResource.SetText("Progress saved!");
         }
-        
+
         // All about camera moves
         h_mouse = mHorizontal * Input.GetAxis("Mouse X");
         v_mouse += mVertical * Input.GetAxis("Mouse Y");
 
         v_mouse = Mathf.Clamp(v_mouse, minRotation, maxRotation);
-        
-        cam.transform.localEulerAngles = new Vector3(-v_mouse, 0,0);
+
+        cam.transform.localEulerAngles = new Vector3(-v_mouse, 0, 0);
         transform.Rotate(0, h_mouse, 0);
         //If the player its colliding with the floor
         if (characterController.isGrounded)
@@ -112,17 +109,18 @@ public class FPcontroller : MonoBehaviour, ICrafter
             {
                 move = transform.TransformDirection(move) * walkSpeed;
             }
+
             //If player use Space, then make a jump
             if (Input.GetKey(KeyCode.Space))
             {
                 move.y = jumpSpeed;
             }
         }
-        
+
         //Set the gravity with deltatime to get a good smooth jump
         move.y -= gravity * Time.deltaTime;
         characterController.Move(move * Time.deltaTime);
-        
+
         //Timer for popup
         timer -= Time.deltaTime;
 
@@ -130,14 +128,14 @@ public class FPcontroller : MonoBehaviour, ICrafter
         {
             HidePopup();
         }
-        
     }
-    
+
     //Get the position of the player.
-    public Vector3 GetPosition() {
+    public Vector3 GetPosition()
+    {
         return transform.position;
     }
-    
+
 
     public void CraftItem(Item.ItemType itemType)
     {
@@ -151,7 +149,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
         int ironRestante = 0;
         int pearlRestante = 0;
         int meatRestante = 0;
-       
+
         bool canCraft = false;
         if (itemType == Item.ItemType.LaCanicadora)
         {
@@ -181,15 +179,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             ironDos = iron;
                                             pearlDos = pearl;
                                             ShowPopup();
-                                            notResource.SetText("You crafted: LaCanicadora" );
-
+                                            notResource.SetText("You crafted: LaCanicadora");
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
                 }
             }
 
@@ -204,8 +200,6 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
-                
-
             }
             else
             {
@@ -213,7 +207,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 notResource.SetText("Not enough resources.");
             }
         }
-        
+
         if (itemType == Item.ItemType.DoubleCannon)
         {
             foreach (Item rock in inventory.GetItemList())
@@ -242,14 +236,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             ironDos = iron;
                                             pearlDos = pearl;
                                             ShowPopup();
-                                            notResource.SetText("You crafted: DoubleCannon" );
+                                            notResource.SetText("You crafted: DoubleCannon");
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
                 }
             }
 
@@ -264,8 +257,6 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
-                
-
             }
             else
             {
@@ -302,14 +293,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             ironDos = iron;
                                             pearlDos = pearl;
                                             ShowPopup();
-                                            notResource.SetText("You crafted: ElSuspenso" );
+                                            notResource.SetText("You crafted: ElSuspenso");
                                         }
                                     }
                                 }
                             }
                         }
                     }
-
                 }
             }
 
@@ -324,8 +314,6 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Pearl, amount = pearlRestante});
-
-
             }
             else
             {
@@ -333,7 +321,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 notResource.SetText("Not enough resources.");
             }
         }
-        
+
         if (itemType == Item.ItemType.Health)
         {
             foreach (Item rock in inventory.GetItemList())
@@ -362,7 +350,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
                                             ironDos = iron;
                                             meatDos = meat;
                                             ShowPopup();
-                                            notResource.SetText("You crafted: Health" );
+                                            notResource.SetText("You crafted: Health");
                                         }
                                     }
                                 }
@@ -383,9 +371,8 @@ public class FPcontroller : MonoBehaviour, ICrafter
                 inventory.AddItem(new Item {itemType = Item.ItemType.Crystal, amount = crystalRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Iron, amount = ironRestante});
                 inventory.AddItem(new Item {itemType = Item.ItemType.Meat, amount = meatRestante});
-
-
-            }else
+            }
+            else
             {
                 ShowPopup();
                 notResource.SetText("Not enough resources.");
@@ -416,8 +403,10 @@ public class FPcontroller : MonoBehaviour, ICrafter
         dict.BeginMap();
         foreach (Item item in inventory.GetItemList())
         {
-            dict.Key(item.itemType.ToString()); dict.Value(item.amount);
+            dict.Key(item.itemType.ToString());
+            dict.Value(item.amount);
         }
+
         dict.EndMap();
 
         string json = dict.ToString();
@@ -425,27 +414,23 @@ public class FPcontroller : MonoBehaviour, ICrafter
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
         {
             outputFile.WriteLine(json);
-            
         }
+
         Debug.Log(json);
     }
 
     public void LoadGame()
     {
-        string prueba;
+        string savegame;
         string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         using (StreamReader inputFile = new StreamReader(Path.Combine(docupath, "indepth.save")))
         {
-            prueba = inputFile.ReadLine();
-            var values = JsonConvert.DeserializeObject<Dictionary<Item.ItemType, int>>(prueba);
+            savegame = inputFile.ReadLine();
+            var values = JsonConvert.DeserializeObject<Dictionary<Item.ItemType, int>>(savegame);
             foreach (var item in values)
             {
-                inventory.AddItem(new Item {itemType  = item.Key, amount = item.Value});
-
+                inventory.AddItem(new Item {itemType = item.Key, amount = item.Value});
             }
         }
-        
-        
-        
     }
 }

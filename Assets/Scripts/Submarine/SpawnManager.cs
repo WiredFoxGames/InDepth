@@ -30,7 +30,7 @@ public class SpawnManager : MonoBehaviour
     //GameObjects
     public GameObject plantSpawner;
     public GameObject boidSpawner;
-    public GameObject enemyMelee;
+    public List<GameObject> enemyMelee;
     public GameObject enemyRanged;
 
     //GameObject trackers
@@ -69,6 +69,7 @@ public class SpawnManager : MonoBehaviour
     
     void SpawnEnemies()
     {
+        int rndEnemy = Random.Range(0, enemyMelee.Count);
         curpos = transform.position;
         
         rndX = Random.Range(curpos.x - spawnEntityRadious, curpos.x + spawnEntityRadious);
@@ -78,7 +79,7 @@ public class SpawnManager : MonoBehaviour
         if (Physics.Raycast(rayLocation, Vector3.down, out rayHit, maxRayDist, groundLayer))
         {
             Vector3 elveatePos = new Vector3(rayHit.point.x, rayHit.point.y + 5, rayHit.point.z);
-            GameObject currEnemy = Instantiate(enemyMelee, elveatePos, transform.rotation);
+            GameObject currEnemy = Instantiate(enemyMelee[rndEnemy], elveatePos, transform.rotation);
             currentEnemies.Add(currEnemy);
             
         }

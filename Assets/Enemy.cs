@@ -58,7 +58,13 @@ public class Enemy : MonoBehaviour
 
         return emptyVector;
     }
-    
+
+    public void TakeDamage(int damage)
+    {
+        
+        health -= damage;
+        Debug.Log(health);
+    }
 
     private void AIManager()
     {
