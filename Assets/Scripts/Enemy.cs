@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
     private void OnDeath()
     {
         Item item = new Item {itemType = Item.ItemType.Meat, amount = 20};
-        ItemWorld.SpawnItemWorld(transform.position, item);
+        //ItemWorld.SpawnItemWorld(transform.position, item);
         Dictionary<String, int>progress = AddToSaveGame(item);
         SaveGame(progress);
         gameObject.SetActive(false);
@@ -120,8 +120,17 @@ public class Enemy : MonoBehaviour
     public void SaveGame(Dictionary<String, int> values)
     {
         string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        
-        string json = values.ToString();
+        var dict = new JsonFormatter();
+        dict.BeginMap();
+        foreach (String key in values.Keys)
+        {
+            dict.Key(key);
+            dict.Value(values[key]);
+        }
+
+        dict.EndMap();
+
+        string json = dict.ToString();
 
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
         {
