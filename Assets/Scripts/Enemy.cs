@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
+using UniJSON;
 using UnityEngine;
+using UnityEngine.Analytics;
 
 public class Enemy : MonoBehaviour
 {
     // Bools
     public bool isRanged;
-    
+
     // Stats
     public int health;
     public int damage;
@@ -15,26 +19,32 @@ public class Enemy : MonoBehaviour
     public float steer;
     public float detectRadius;
     private Vector3 emptyVector;
-    
+
     // References
     public LayerMask playerLayer;
     public WeaponManager wm;
     private Transform enemyTransform;
     private Vector3 playerPos;
-    
+
     // States
     private bool playerDetected;
 
+    private Inventory inventory;
 
     private void Awake()
     {
         enemyTransform = gameObject.transform;
-        emptyVector = new Vector3(0,0,0);
+        emptyVector = new Vector3(0, 0, 0);
     }
 
     private void OnDeath()
     {
+        Item item = new Item {itemType = Item.ItemType.Meat, amount = 20};
+        ItemWorld.SpawnItemWorld(transform.position, item);
+        Dictionary<String, int>progress = AddToSaveGame(item);
+        SaveGame(progress);
         gameObject.SetActive(false);
+    
     }
 
     /// <summary>
@@ -61,7 +71,6 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        
         health -= damage;
         Debug.Log(health);
     }
@@ -69,7 +78,7 @@ public class Enemy : MonoBehaviour
     private void AIManager()
     {
         playerPos = DetectPlayer();
-        
+
         if (playerPos != emptyVector)
         {
             Vector3 lookVector = playerPos - transform.position;
@@ -78,11 +87,10 @@ public class Enemy : MonoBehaviour
 
             if (isRanged)
             {
-                
             }
             else
             {
-                gameObject.transform.position += transform.forward * Time.deltaTime * speed; 
+                gameObject.transform.position += transform.forward * Time.deltaTime * speed;
             }
         }
     }
@@ -106,6 +114,60 @@ public class Enemy : MonoBehaviour
         else
         {
             OnDeath();
+        }
+    }
+
+    public void SaveGame(Dictionary<String, int> values)
+    {
+        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        
+        string json = values.ToString();
+
+        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
+        {
+            outputFile.WriteLine(json);
+        }
+    }
+
+    public Dictionary<String, int> AddToSaveGame(Item item)
+    {
+        string savegame;
+        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        using (StreamReader inputFile = new StreamReader(Path.Combine(docupath, "indepth.save")))
+        {
+            savegame = inputFile.ReadLine();
+            var values = JsonConvert.DeserializeObject<Dictionary<String, int>>(savegame);
+            if (values.ContainsKey(item.itemType.ToString()))
+            {
+                values[item.itemType.ToString()] += item.amount;
+            }
+            else
+            {
+                values[item.itemType.ToString()] = item.amount;
+            }
+
+            return values;
+        }
+    }
+
+    public void SaveGame()
+    {
+        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        var dict = new JsonFormatter();
+        dict.BeginMap();
+        foreach (Item item in inventory.GetItemList())
+        {
+            dict.Key(item.itemType.ToString());
+            dict.Value(item.amount);
+        }
+
+        dict.EndMap();
+
+        string json = dict.ToString();
+
+        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
+        {
+            outputFile.WriteLine(json);
         }
     }
 }

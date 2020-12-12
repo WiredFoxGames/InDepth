@@ -415,8 +415,7 @@ public class FPcontroller : MonoBehaviour, ICrafter
         {
             outputFile.WriteLine(json);
         }
-
-        Debug.Log(json);
+        
     }
 
     public void LoadGame()

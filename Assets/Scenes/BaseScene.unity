@@ -14403,7 +14403,6 @@ MonoBehaviour:
   maxRotation: 60
   ui_popup: {fileID: 279024927}
   notResource: {fileID: 1426420486}
-  itemRes: {fileID: 0}
   timer: 0
 --- !u!143 &1073237546
 CharacterController:

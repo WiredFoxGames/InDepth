@@ -12,6 +12,7 @@ TagManager:
   - PlayText
   - ExitText
   - PlayerBullet
+  - itemWorld
   layers:
   - Default
   - TransparentFX
