@@ -11,12 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BaseScene.unity
     guid: b42ca4c5c936383429d2318c931f7ad2
-  - enabled: 0
-    path: Assets/Scenes/LoadingScreen.unity
-    guid: e59da80a440aa5b4987edd5abd1e4d9b
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/ea180d5c2a0fe4bd3a916b7b3c598eff
-    guid: ea180d5c2a0fe4bd3a916b7b3c598eff
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: e3b385334b0be454986468c4b9a8d3bf

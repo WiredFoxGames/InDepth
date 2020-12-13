@@ -87,7 +87,7 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentScore < maxEnemies)
+        if (currentScore < winAmmount)
         {
             if (readyToSpawn)
             {
@@ -126,7 +126,7 @@ public class SpawnManager : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Return))
             {
-                SceneManager.LoadScene("GameScene 1");
+                SceneManager.LoadScene("GameScene");
             }
         }
     }

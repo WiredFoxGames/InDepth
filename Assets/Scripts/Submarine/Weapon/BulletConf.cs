@@ -33,6 +33,7 @@ public class BulletConf : MonoBehaviour
         {
             if (target.gameObject.CompareTag("Enemy"))
             {
+                Debug.Log("Enemy collided with bullet");
                 target.gameObject.GetComponent<Enemy>().TakeDamage(damage);
             }
             gameObject.SetActive(false);
