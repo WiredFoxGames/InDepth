@@ -2,14 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class SpawnManager : MonoBehaviour
 {
     //Maximum amount of entities at one time
-    public int maxEnemies = 20;
-    public int maxBoids = 4;
+    public int maxEnemies = 50;
     public int maxVegetation = 200;
+    private int currentEnemyNumber = 0;
     
     //Positional variables
     public int spawnHeight = 50;     // Height at which ray is cast downwards to see if an enemy can spawn
@@ -24,14 +25,15 @@ public class SpawnManager : MonoBehaviour
     private Vector3 curpos;        //Position of the submarine, avoids repeated call
     
     //Score trackers
-    public int winAmmount = 20;
-    public int scoreAmmount = 0;
+    public int winAmmount = 25;
+    public int currentScore = 0;
     
     //GameObjects
     public GameObject plantSpawner;
     public GameObject boidSpawner;
     public List<GameObject> enemyMelee;
     public GameObject enemyRanged;
+    public GameObject ui_popup;
 
     //GameObject trackers
     private List<GameObject> currentEnemies;
@@ -39,6 +41,7 @@ public class SpawnManager : MonoBehaviour
     
     //Bools
     private bool readyToSpawn = false;
+    
     
 
     void SpawnVegetation()
@@ -61,11 +64,7 @@ public class SpawnManager : MonoBehaviour
             currentVegetation.Add(currPlant);
         }
     }
-    
-    void SpawnBoids()
-    {
-        
-    }
+
     
     void SpawnEnemies()
     {
@@ -88,36 +87,58 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (readyToSpawn)
+        if (currentScore < maxEnemies)
         {
-            while (currentVegetation.Count < maxVegetation)
+            if (readyToSpawn)
             {
-                SpawnVegetation();
-            }
+                while (currentVegetation.Count < maxVegetation)
+                {
+                    SpawnVegetation();
+                }
             
-            if (currentEnemies.Count < maxEnemies)
+                if (currentEnemyNumber < maxEnemies)
+                {
+                    SpawnEnemies();
+                }
+            }
+            else
             {
-                SpawnEnemies();
+                if (gameObject.GetComponent<MeshGenerator>().LoadedStatus())
+                {
+                    Debug.Log("Ready to spawn");
+                    currentEnemies = new List<GameObject>();
+                    currentVegetation = new List<GameObject>();
+
+                    readyToSpawn = true;
+                }
             }
         }
         else
         {
-            if (gameObject.GetComponent<MeshGenerator>().LoadedStatus())
+            foreach (var e in currentEnemies)
             {
-                Debug.Log("Ready to spawn");
-                currentEnemies = new List<GameObject>();
-                currentVegetation = new List<GameObject>();
+                e.SetActive(false);
+                
+            }
+            
+            ui_popup.SetActive(true);
 
-                readyToSpawn = true;
+            if (Input.GetKey(KeyCode.Return))
+            {
+                SceneManager.LoadScene("GameScene 1");
             }
         }
     }
 
-    
-    
-    public void IncreaseScore()
+    private void Awake()
     {
-        scoreAmmount++;
+        ui_popup.SetActive(false);
     }
-    
+
+    public void reduceCurrentEnemies()
+    {
+        currentEnemyNumber--;
+        currentScore++;
+    }
+
 }

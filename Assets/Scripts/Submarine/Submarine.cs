@@ -51,6 +51,7 @@ public class Submarine : MonoBehaviour
         currentSpeed = (int)(maxSpeed);
         healthbar.SetMaxHealth(maxHealth);
         boostbar.SetMaxBooster(maxBooster);
+        gameObject.GetComponent<WeaponManager>().LoadNewGun(0);
     }
     
     void Update()
@@ -70,6 +71,26 @@ public class Submarine : MonoBehaviour
                 accelDir += 1;
             }
 
+            if (Input.GetKey(KeyCode.F1))
+            {
+                gameObject.GetComponent<WeaponManager>().LoadNewGun(0);
+            }
+            
+            if (Input.GetKey(KeyCode.F2))
+            {
+                gameObject.GetComponent<WeaponManager>().LoadNewGun(1);
+            }
+            
+            if (Input.GetKey(KeyCode.F3))
+            {
+                gameObject.GetComponent<WeaponManager>().LoadNewGun(2);
+            }
+            
+            if (Input.GetKey(KeyCode.F7))
+            {
+                gameObject.GetComponent<WeaponManager>().LoadNewGun(3);
+            }
+            
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 if (curBooster >= maxBooster)

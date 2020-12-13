@@ -16,11 +16,76 @@ public class WeaponManager : MonoBehaviour
     bool shooting, readyToShoot, reloading;
 
     //Reference
-    public RaycastHit rayHit;
-    public LayerMask enemyLayer;
-    public GameObject crosshair;
     public GameObject bullet;
 
+
+    public void LoadNewGun(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                damage = 60;
+                timeBetweenShooting = 0.05f;
+                spread = 2f;
+                range = 50f;
+                reloadTime = 0f;
+                timeBetweenShooting = 0.0001f;
+                magazineSize = 50000000;
+                bulletsPerTap = 2;
+                allowButtonHold = true;
+                break;
+            
+            case 1:
+                damage = 20000;
+                timeBetweenShooting = 0.1f;
+                spread = 0f;
+                range = 200f;
+                reloadTime = 0f;
+                timeBetweenShooting = 0.1f;
+                magazineSize = 50000000;
+                bulletsPerTap = 1;
+                allowButtonHold = true;
+                break;
+            
+            case 2:
+                damage = 20;
+                timeBetweenShooting = 0.005f;
+                spread = 4f;
+                range = 20f;
+                reloadTime = 0f;
+                timeBetweenShooting = 0.001f;
+                magazineSize = 50000000;
+                bulletsPerTap = 20;
+                allowButtonHold = true;
+                break;
+            
+            case 3:
+                damage = 2000;
+                timeBetweenShooting = 0.005f;
+                spread = 4f;
+                range = 20f;
+                reloadTime = 0f;
+                timeBetweenShooting = 0.001f;
+                magazineSize = 50000000;
+                bulletsPerTap = 80;
+                allowButtonHold = true;
+                break;
+        }
+    }
+
+    public WeaponManager(int damage, float timeBetweenShooting, float spread, float range, float reloadTime, float timeBetweenShots, int magazineSize, int bulletsPerTap, bool allowButtonHold)
+    {
+        this.damage = damage;
+        this.timeBetweenShooting = timeBetweenShooting;
+        this.spread = spread;
+        this.range = range;
+        this.reloadTime = reloadTime;
+        this.timeBetweenShots = timeBetweenShots;
+        this.magazineSize = magazineSize;
+        this.bulletsPerTap = bulletsPerTap;
+        this.allowButtonHold = allowButtonHold;
+        this.bullet = this.bullet;
+    }
 
     private void Awake()
     {

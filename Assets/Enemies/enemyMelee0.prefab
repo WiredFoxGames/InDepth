@@ -132,6 +132,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   wm: {fileID: 0}
+  spawnManager: {fileID: 0}
 --- !u!1001 &7035634232091719355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,6 +217,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13700000, guid: fb852becf20dfa64cb2fd5550a0e08d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b96e1fa6fec67f4d991eee8833f0aab, type: 2}
+    - target: {fileID: 13700000, guid: fb852becf20dfa64cb2fd5550a0e08d0, type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.00033783354
       objectReference: {fileID: 0}
@@ -243,10 +248,6 @@ PrefabInstance:
       propertyPath: m_DirtyAABB
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: fb852becf20dfa64cb2fd5550a0e08d0, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3b96e1fa6fec67f4d991eee8833f0aab, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb852becf20dfa64cb2fd5550a0e08d0, type: 3}
 --- !u!4 &7035634232091323451 stripped

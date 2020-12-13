@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     public WeaponManager wm;
     private Transform enemyTransform;
     private Vector3 playerPos;
+    public SpawnManager spawnManager;
 
     // States
     private bool playerDetected;
@@ -45,6 +46,7 @@ public class Enemy : MonoBehaviour
         Item item = new Item {itemType = itRand, amount = itAmount};
         Dictionary<String, int>progress = AddToSaveGame(item);
         SaveGame(progress);
+        spawnManager.reduceCurrentEnemies();
         gameObject.SetActive(false);
     
     }
