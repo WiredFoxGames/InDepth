@@ -42,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ConditionalHidePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/GenericCallUtility/GenericExpressionCallFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AudioGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +52,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/boostbar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Doors/DoorsDetection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Doors/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,8 +128,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/PauseMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Doors/DoorsDetection.cs" />
       </list>
     </option>
   </component>
@@ -204,6 +207,8 @@
       <workItem from="1607602024398" duration="8962000" />
       <workItem from="1607625900268" duration="563000" />
       <workItem from="1607687721428" duration="19816000" />
+      <workItem from="1607887364711" duration="12000" />
+      <workItem from="1607888220954" duration="1904000" />
     </task>
     <servers />
   </component>
