@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using UniJSON;
 using UnityEngine;
 using UnityEngine.Analytics;
+using Random = UnityEngine.Random;
 
 public class Enemy : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Enemy : MonoBehaviour
     private bool playerDetected;
 
     private Inventory inventory;
-
+    private Item.ItemType itRand;
     private void Awake()
     {
         enemyTransform = gameObject.transform;
@@ -39,8 +40,9 @@ public class Enemy : MonoBehaviour
 
     private void OnDeath()
     {
-        Item item = new Item {itemType = Item.ItemType.Meat, amount = 20};
-        //ItemWorld.SpawnItemWorld(transform.position, item);
+        int itAmount = Random.Range(0, 5);
+        itRand = (Item.ItemType) Random.Range(0, 5);
+        Item item = new Item {itemType = itRand, amount = itAmount};
         Dictionary<String, int>progress = AddToSaveGame(item);
         SaveGame(progress);
         gameObject.SetActive(false);
@@ -158,25 +160,5 @@ public class Enemy : MonoBehaviour
             return values;
         }
     }
-
-    public void SaveGame()
-    {
-        string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        var dict = new JsonFormatter();
-        dict.BeginMap();
-        foreach (Item item in inventory.GetItemList())
-        {
-            dict.Key(item.itemType.ToString());
-            dict.Value(item.amount);
-        }
-
-        dict.EndMap();
-
-        string json = dict.ToString();
-
-        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docupath, "indepth.save")))
-        {
-            outputFile.WriteLine(json);
-        }
-    }
+    
 }

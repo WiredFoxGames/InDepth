@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
+using System.Text;
 using Newtonsoft.Json;
 using TMPro;
 using UniJSON;
@@ -422,14 +423,28 @@ public class FPcontroller : MonoBehaviour, ICrafter
     {
         string savegame;
         string docupath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        using (StreamReader inputFile = new StreamReader(Path.Combine(docupath, "indepth.save")))
+        if (File.Exists(Path.Combine(docupath, "indepth.save")))
         {
-            savegame = inputFile.ReadLine();
-            var values = JsonConvert.DeserializeObject<Dictionary<Item.ItemType, int>>(savegame);
-            foreach (var item in values)
+            using (StreamReader inputFile = new StreamReader(Path.Combine(docupath, "indepth.save")))
             {
-                inventory.AddItem(new Item {itemType = item.Key, amount = item.Value});
+            
+                savegame = inputFile.ReadLine();
+                var values = JsonConvert.DeserializeObject<Dictionary<Item.ItemType, int>>(savegame);
+                foreach (var item in values)
+                {
+                    inventory.AddItem(new Item {itemType = item.Key, amount = item.Value});
+                }
             }
         }
+        else
+        {
+            using (FileStream fs = File.Create(Path.Combine(docupath, "indepth.save")))
+            {
+                byte[] info = new UTF8Encoding(true).GetBytes("{\"Rock\":0,\"Crystal\":0,\"Iron\":0,\"Pearl\":0,\"Meat\":0}");
+                fs.Write(info,0,info.Length);
+            }
+            
+        }
+        
     }
 }

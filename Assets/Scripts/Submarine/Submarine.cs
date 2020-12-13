@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.IO;
+using System.Threading;
 using UniJSON;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -139,7 +141,10 @@ public class Submarine : MonoBehaviour
 
     public void OnDeath()
     {
+        //TODO HACER CORUTINA DE TIEMPO DE CARGA.
+        //TODO HACER POPUP DE MUERTE O VICTORIA.
         gameObject.SetActive(false);
+        SceneManager.LoadScene("BaseScene");
     }
 
     public void TakeDamage(int damage)

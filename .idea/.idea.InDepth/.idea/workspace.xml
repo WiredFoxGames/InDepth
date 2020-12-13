@@ -106,11 +106,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/healthbar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/boostbar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
       </list>
     </option>
   </component>
