@@ -51,7 +51,6 @@
             <e p="Validation.cs" t="Include" />
           </e>
         </e>
-        <e p="PauseMenu.cs" t="Include" />
         <e p="Sci-Fi Styled Modular Pack" t="Include">
           <e p="Readme.txt" t="Include" />
         </e>
@@ -114,6 +113,7 @@
             <e p="MySceneManager.cs" t="Include" />
           </e>
           <e p="MeshGenerator.cs" t="Include" />
+          <e p="PauseMenu.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="CharacterInventory.cs" t="Include" />
             <e p="FPcontroller.cs" t="Include" />

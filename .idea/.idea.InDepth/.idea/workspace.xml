@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidUser.cs" root0="FORCE_HIGHLIGHTING" />
@@ -29,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Editor/Tests/MsgPack/MapTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Weapon/BulletConf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/BytesBuffer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +80,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/TerrainGen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/PerlinNoiseTexture.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Terrain/PerlinItemValue.cs" />
         <option value="$PROJECT_DIR$/Assets/Materials/Mandelbrot.shader" />
@@ -131,6 +130,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Doors/DoorsDetection.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PauseMenu.cs" />
       </list>
     </option>
   </component>
@@ -209,6 +209,7 @@
       <workItem from="1607687721428" duration="19816000" />
       <workItem from="1607887364711" duration="12000" />
       <workItem from="1607888220954" duration="1904000" />
+      <workItem from="1607891550017" duration="257000" />
     </task>
     <servers />
   </component>
