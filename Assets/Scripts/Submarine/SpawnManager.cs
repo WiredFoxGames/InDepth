@@ -99,6 +99,7 @@ public class SpawnManager : MonoBehaviour
                 if (currentEnemyNumber < maxEnemies)
                 {
                     SpawnEnemies();
+                    currentEnemyNumber++;
                 }
             }
             else

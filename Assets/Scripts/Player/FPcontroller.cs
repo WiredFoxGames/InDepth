@@ -381,13 +381,13 @@ public class FPcontroller : MonoBehaviour, ICrafter
         }
     }
 
-    void ShowPopup()
+    public void ShowPopup()
     {
         ui_popup.SetActive(true);
         timer = popupTime;
     }
 
-    void HidePopup()
+    public void HidePopup()
     {
         ui_popup.SetActive(false);
     }

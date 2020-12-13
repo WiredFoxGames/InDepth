@@ -22,21 +22,11 @@ public class InventoryChar : MonoBehaviour
         if (_inventoryEnabled)
         {
             inventory.SetActive(true);
-            Cursor.lockState = CursorLockMode.None;
-            stopCam();
-
         }
         else
         {    
             inventory.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked; 
         }
     }
-    
-    void stopCam()
-    {
-        
-        //cam.transform.localEulerAngles = new Vector3(1, 1,1);
-        
-    }
+ 
 }

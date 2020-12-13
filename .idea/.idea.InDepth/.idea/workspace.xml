@@ -11,14 +11,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PauseMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/IO/ImporterContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/BoidGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boids/Actions/ActionAlignment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/IStore/BytesStore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/healthbar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helper/ConditionalHideAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniVRM/Editor/Tests/NormalizeTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/IO/TextureLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/ConcreteCast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Editor/Tests/MsgPack/MapTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,11 +34,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/BytesBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Submarine/Weapon/WeaponManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/Format/glbTypes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/GenericDeserializer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shaders/Terrain.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniVRM/Scripts/BlendShape/PreviewSceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/IValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/ConditionalHidePropertyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/GenericCallUtility/GenericExpressionCallFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/MySceneManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" root0="FORCE_HIGHLIGHTING" />
@@ -39,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/VRM/UniJSON/Scripts/JsonSchemaValidator/JsonDictionaryValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/CharacterInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/boostbar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Doors/DoorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/ItemAssets.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ColourGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" root0="FORCE_HIGHLIGHTING" />
@@ -59,6 +72,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VRM/UniGLTF/Scripts/IO/AnimationImporter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -92,15 +107,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPcontroller.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory_Open.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ICrafter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI_Craft.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemWorld.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ButtonPlay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoadingScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/UI_InventorySub.cs" />
@@ -108,9 +120,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/boostbar.cs" />
         <option value="$PROJECT_DIR$/Assets/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FPcontroller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryChar.cs" />
+        <option value="$PROJECT_DIR$/Assets/PauseMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SpawnManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ButtonExit.cs" />
       </list>
     </option>
   </component>
@@ -280,10 +297,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607810417014" />
-    <state x="548" y="238" width="1014" height="812" key="find.popup" timestamp="1607805876895">
+    <state x="548" y="238" width="1014" height="812" key="find.popup" timestamp="1607881766911">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="548" y="238" width="1014" height="812" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607805876895" />
+    <state x="548" y="238" width="1014" height="812" key="find.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1607881766911" />
     <state x="624" y="254" key="run.anything.popup" timestamp="1607112304356">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

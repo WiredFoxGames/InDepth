@@ -16,7 +16,6 @@ public class ButtonExit : MonoBehaviour
                 if (hit.transform.name == "ExitText")
                 {
                     Application.Quit();
-                    Debug.Log("Hola");
                 }
                 
             }
