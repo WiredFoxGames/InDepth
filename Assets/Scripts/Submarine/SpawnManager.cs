@@ -141,5 +141,4 @@ public class SpawnManager : MonoBehaviour
         currentEnemyNumber--;
         currentScore++;
     }
-
 }

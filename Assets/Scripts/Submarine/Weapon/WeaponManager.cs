@@ -73,20 +73,6 @@ public class WeaponManager : MonoBehaviour
         }
     }
 
-    public WeaponManager(int damage, float timeBetweenShooting, float spread, float range, float reloadTime, float timeBetweenShots, int magazineSize, int bulletsPerTap, bool allowButtonHold)
-    {
-        this.damage = damage;
-        this.timeBetweenShooting = timeBetweenShooting;
-        this.spread = spread;
-        this.range = range;
-        this.reloadTime = reloadTime;
-        this.timeBetweenShots = timeBetweenShots;
-        this.magazineSize = magazineSize;
-        this.bulletsPerTap = bulletsPerTap;
-        this.allowButtonHold = allowButtonHold;
-        this.bullet = this.bullet;
-    }
-
     private void Awake()
     {
         bulletsLeft = magazineSize;
