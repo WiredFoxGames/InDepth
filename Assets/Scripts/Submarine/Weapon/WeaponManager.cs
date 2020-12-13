@@ -25,11 +25,11 @@ public class WeaponManager : MonoBehaviour
         {
             case 0:
                 damage = 60;
-                timeBetweenShooting = 0.05f;
+                timeBetweenShooting = 0.1f;
                 spread = 2f;
                 range = 50f;
                 reloadTime = 0f;
-                timeBetweenShooting = 0.0001f;
+                timeBetweenShooting = 0.1f;
                 magazineSize = 50000000;
                 bulletsPerTap = 2;
                 allowButtonHold = true;
